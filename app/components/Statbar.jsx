@@ -1,8 +1,12 @@
+"use client";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import { useMyContext } from "./ContextProvider";
 
 export default function Statbar() {
+  const dbjson = useMyContext();
+
   return (
     <Box
       sx={{
@@ -34,9 +38,9 @@ export default function Statbar() {
       >
         <Typography variant="body2">About</Typography>
       </Link>
-      <Typography variant="body2">XP: 0</Typography>
+      <Typography variant="body2">XP: {dbjson.xp}</Typography>
       <Typography variant="body2" sx={{ marginLeft: "20px" }}>
-        Level: 1
+        Level: {dbjson.level}
       </Typography>
     </Box>
   );
