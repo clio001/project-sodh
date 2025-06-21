@@ -1,12 +1,16 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Drawer, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import { useMyContext } from "./ContextProvider";
 
 export default function Statbar() {
   const dbjson = useMyContext();
+  const [open, setOpen] = React.useState(false);
 
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
   return (
     <Box
       sx={{
@@ -18,7 +22,7 @@ export default function Statbar() {
         padding: "0.5rem",
       }}
     >
-      <Link
+      {/* <Link
         href="/"
         style={{
           textDecoration: "none",
@@ -37,11 +41,42 @@ export default function Statbar() {
         }}
       >
         <Typography variant="body2">About</Typography>
-      </Link>
+      </Link> */}
       <Typography variant="body2">XP: {dbjson.xp}</Typography>
       <Typography variant="body2" sx={{ marginLeft: "20px" }}>
         Level: {dbjson.level}
       </Typography>
+      <Typography
+        variant="body2"
+        sx={{ marginLeft: "20px" }}
+        onClick={toggleDrawer(true)}
+      >
+        Inventar
+      </Typography>
+      <div>
+        <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+          <Box sx={{ width: "100vw" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Typography variant="h6" sx={{ padding: "3rem" }}>
+                Inventar
+              </Typography>
+              <Typography
+                variant=""
+                onClick={toggleDrawer(false)}
+                sx={{ padding: "1rem" }}
+              >
+                Close
+              </Typography>
+            </Box>
+          </Box>
+        </Drawer>
+      </div>
     </Box>
   );
 }
