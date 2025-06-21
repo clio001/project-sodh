@@ -9,7 +9,7 @@ export default function page() {
   const { scene } = useMyContext();
 
   return (
-    <main style={{ backgroundColor: "#f0f0f0" }}>
+    <main>
       <Box
         sx={{
           display: "flex",
