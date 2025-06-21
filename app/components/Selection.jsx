@@ -47,9 +47,7 @@ export default function Selection() {
         }}
         onClick={() => setLevel((prev) => prev + 1)}
       >
-        <Typography variant="body2" onClick={() => setScene(scene[1])}>
-          Level up!
-        </Typography>
+        <Typography variant="body2">Level up!</Typography>
       </Box>
       <Box
         sx={{
@@ -64,9 +62,7 @@ export default function Selection() {
         }}
         onClick={() => setLevel((prev) => prev + 1)}
       >
-        <Typography variant="body2" onClick={() => setScene(scene[1])}>
-          Nächste Szene ...
-        </Typography>
+        <Typography variant="body2">Nächste Szene ...</Typography>
       </Box>
       <Box
         sx={{
@@ -81,7 +77,7 @@ export default function Selection() {
         }}
         onClick={() => setLevel((prev) => prev + 1)}
       >
-        <Typography variant="body2" onClick={() => setScene(scene[1])}>
+        <Typography variant="body2">
           Füge Menükarte meinem Inventar hinzu!
         </Typography>
       </Box>
