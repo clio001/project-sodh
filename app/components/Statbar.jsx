@@ -75,7 +75,7 @@ export default function Statbar() {
                 X
               </Typography>
             </Box>
-            <Box>
+            <Box sx={{ padding: "1rem" }}>
               <Divider>
                 <Typography variant="subtitle1" p={2}>
                   Items
@@ -83,20 +83,58 @@ export default function Statbar() {
               </Divider>
 
               {/* TODO iterate over list of items and return a card/box for each item */}
-              {items.map((item, key) => (
-                <Box key={key}>{item.title}</Box>
-              ))}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  gap: "1rem",
+                }}
+              >
+                {items.map((item, key) => (
+                  <Box
+                    sx={{
+                      border: "1px solid lightgray",
+                      padding: "1rem",
+                      borderRadius: "8px",
+                      backgroundColor: "lightyellow",
+                    }}
+                    key={key}
+                  >
+                    {item.title}
+                  </Box>
+                ))}
+              </Box>
             </Box>
-            <Box>
+            <Box sx={{ padding: "1rem" }}>
               <Divider>
                 <Typography variant="subtitle1" p={2}>
                   Skills
                 </Typography>
               </Divider>
               {/* TODO iterate over list of journal entries and return a card/box for each entry */}
-              {entries.map((entry, key) => (
-                <Box key={key}>{entry.name}</Box>
-              ))}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  gap: "1rem",
+                }}
+              >
+                {entries.map((entry, key) => (
+                  <Box
+                    sx={{
+                      border: "1px solid lightgray",
+                      padding: "1rem",
+                      borderRadius: "8px",
+                      backgroundColor: "lightpink",
+                    }}
+                    key={key}
+                  >
+                    {entry.name}
+                  </Box>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Drawer>
