@@ -1,11 +1,11 @@
 "use client";
-import { Box, Button, Drawer, Paper, Typography } from "@mui/material";
-import React, { use } from "react";
+import { Box, Paper, Typography } from "@mui/material";
+import React from "react";
 import "../globals.css";
 import Selection from "../components/Selection";
 import { useMyContext } from "../components/ContextProvider";
 
-export default function page() {
+export default function Page() {
   const { scene } = useMyContext();
 
   return (
