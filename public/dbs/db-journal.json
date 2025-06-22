@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "name": "Recherche im StabiKat",
+      "description": "A classic film camera from the 1960s.",
+      "image": "https://example.com/images/vintage-camera.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Recherche in den Digitalisierten Sammlungen",
+      "description": "Handcrafted notebook with leather cover and recycled paper.",
+      "image": "https://example.com/images/leather-notebook.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Metadaten verstehen",
+      "description": "A vintage typewriter from the 1950s, perfect for writers.",
+      "image": "https://example.com/images/vintage-typewriter.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Stabi-Ausweis beantragen",
+      "description": "A classic vinyl record player with a sleek design.",
+      "image": "https://example.com/images/vinyl-player.jpg"
+    }
+]

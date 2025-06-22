@@ -1,0 +1,32 @@
+[
+    {
+      "id": "1",
+      "ppn": "123456789",
+      "manifest": "https://example.org/iiif/manifest/1",
+      "title": "Hotel Bristol, Menükarte",
+      "creator": "Rudolf Dressel",
+      "place": "Berlin",
+      "publisher": "Hotel Bristol",
+      "year": "1904"
+    },
+    {
+      "id": "2",
+      "ppn": "987654321",
+      "manifest": "https://example.org/iiif/manifest/2",
+      "title": "Hotel Adlon, Speisekarte",
+      "creator": "John Smith",
+      "place": "Berlin",
+      "publisher": "Knowledge House",
+      "year": "1909"
+    },
+    {
+      "id": "3",
+      "ppn": "112233445",
+      "manifest": "https://example.org/iiif/manifest/3",
+      "title": "Hotel Kaiserhof, Speisekarte",
+      "creator": "Jane Doe",
+      "place": "Berlin",
+      "publisher": "Kaiserhof Verlag",
+      "year": "1910"
+    }
+  ]

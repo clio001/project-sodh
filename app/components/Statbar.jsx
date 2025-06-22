@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Drawer, Typography } from "@mui/material";
+import { Box, Button, Divider, Drawer, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import { useMyContext } from "./ContextProvider";
@@ -7,6 +7,7 @@ import { useMyContext } from "./ContextProvider";
 export default function Statbar() {
   const dbjson = useMyContext();
   const [open, setOpen] = React.useState(false);
+  const { items, entries } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -71,8 +72,31 @@ export default function Statbar() {
                 onClick={toggleDrawer(false)}
                 sx={{ padding: "1rem" }}
               >
-                Close
+                X
               </Typography>
+            </Box>
+            <Box>
+              <Divider>
+                <Typography variant="subtitle1" p={2}>
+                  Items
+                </Typography>
+              </Divider>
+
+              {/* TODO iterate over list of items and return a card/box for each item */}
+              {items.map((item, key) => (
+                <Box key={key}>{item.title}</Box>
+              ))}
+            </Box>
+            <Box>
+              <Divider>
+                <Typography variant="subtitle1" p={2}>
+                  Skills
+                </Typography>
+              </Divider>
+              {/* TODO iterate over list of journal entries and return a card/box for each entry */}
+              {entries.map((entry, key) => (
+                <Box key={key}>{entry.name}</Box>
+              ))}
             </Box>
           </Box>
         </Drawer>
