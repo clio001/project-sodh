@@ -49,8 +49,12 @@ export default function Page() {
               {selectedScene.items &&
                 selectedScene.items.map((item, i) => {
                   return (
-                    <Typography variant="body2" sx={{ padding: "1rem" }}>
-                      <Chip key={i} label={item.description} />
+                    <Typography
+                      key={i}
+                      variant="body2"
+                      sx={{ padding: "1rem" }}
+                    >
+                      <Chip label={item.description} />
                     </Typography>
                   );
                 })}
