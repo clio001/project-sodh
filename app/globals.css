@@ -4,14 +4,20 @@
 }
 
 .container-scenetext {
-  background-color: lightyellow;
+  position: relative;
   opacity: 0.8;
   border-radius: 10px;
-  height: 20vh;
-  width: 90vw;
+  height: fit-content;
+  width: 100vw;
   max-width: 600px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 0px;
+  background-image: radial-gradient(circle at top center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .text:hover {
@@ -22,4 +28,30 @@
 
 .text-color {
   color: lightgrey;
+}
+
+.button-option {
+  border-left: 5px solid brown;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: radial-gradient(circle at center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 15px;
+  opacity: 0.8;
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
+  cursor: pointer;
+
+  animation: fadeIn 0.7s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

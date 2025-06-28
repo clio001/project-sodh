@@ -17,7 +17,7 @@ export default function Page() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "95vh",
+          height: "90vh",
           justifyContent: "space-between",
         }}
       >
@@ -28,7 +28,7 @@ export default function Page() {
         </Box>
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Paper className="container-scenetext" elevation={3}>
+            <Box className="container-scenetext" elevation={3}>
               <Box
                 sx={{
                   display: "flex",
@@ -41,37 +41,28 @@ export default function Page() {
                   variant="outlined"
                   sx={{
                     bgcolor: "lightyellow",
-
                     border: "2px solid brown",
                   }}
                 />
-              </Box>
+              </Box>{" "}
               <Typewriter text={selectedScene.description} speed={35} />
-
-              <Typography variant="body2" sx={{ padding: "1rem" }}>
-                {selectedScene.items &&
-                  selectedScene.items.map((item, i) => {
-                    return <Chip key={i} label={item.description} />;
-                  })}
-              </Typography>
-            </Paper>
+              {selectedScene.items &&
+                selectedScene.items.map((item, i) => {
+                  return (
+                    <Typography variant="body2" sx={{ padding: "1rem" }}>
+                      <Chip key={i} label={item.description} />
+                    </Typography>
+                  );
+                })}
+            </Box>
           </Box>
           <Box>
             {selectedScene &&
               selectedScene.options.map((option, i) => (
                 <Box
-                  key={i}
-                  sx={{
-                    borderLeft: "5px solid brown",
-                    borderRadius: "50px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    backgroundColor: "lightyellow",
-                    padding: "15px",
-                    opacity: "0.8",
-                    width: "80vw",
-                    maxWidth: "600px",
-                    margin: "10px auto",
-                  }}
+                  key={option.text}
+                  style={{ animationDelay: `${i * 100}ms`, overflow: "hidden" }}
+                  className="button-option"
                   onClick={() => {
                     const nextScene = scene.find(
                       (s) => s.id === option.nextSceneId

@@ -16,17 +16,17 @@ function Typewriter({ text, speed }) {
     return () => clearInterval(interval);
   }, [text, speed]);
   return (
-    <Typography
-      sx={{
-        display: "flex",
-        width: "90vw",
+    <div
+      style={{
+        fontFamily: "arial",
         padding: "1rem",
-        overflow: "hidden",
+        paddingBottom: "1.5rem",
+        fontSize: "14px",
+        lineHeight: "1.5",
       }}
-      variant="body2"
     >
       {displayed}
-    </Typography>
+    </div>
   );
 }
 
