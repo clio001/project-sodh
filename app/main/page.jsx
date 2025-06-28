@@ -29,9 +29,23 @@ export default function Page() {
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Paper className="container-scenetext" elevation={3}>
-              <Typography variant="body2" sx={{ padding: "1rem" }}>
-                {selectedScene.title}
-              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "-1rem",
+                }}
+              >
+                <Chip
+                  label={selectedScene.title}
+                  variant="outlined"
+                  sx={{
+                    bgcolor: "lightyellow",
+
+                    border: "2px solid brown",
+                  }}
+                />
+              </Box>
               <Typewriter text={selectedScene.description} speed={35} />
 
               <Typography variant="body2" sx={{ padding: "1rem" }}>
