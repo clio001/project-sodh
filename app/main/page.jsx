@@ -1,12 +1,13 @@
 "use client";
 import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "../globals.css";
 import Selection from "../components/Selection";
 import { useMyContext } from "../components/ContextProvider";
 
 export default function Page() {
   const { scene } = useMyContext();
+  const [selectedScene, setSelectedScene] = useState(scene[0]);
 
   return (
     <main>
@@ -28,12 +29,41 @@ export default function Page() {
           <Box>
             <Paper className="container-scenetext" elevation={3}>
               <Typography variant="body2" sx={{ padding: "1rem" }}>
-                {scene[0].description}
+                {selectedScene.title}
+              </Typography>
+              <Typography variant="body2" sx={{ padding: "1rem" }}>
+                {selectedScene.description}
               </Typography>
             </Paper>
           </Box>
           <Box>
-            <Selection />
+            {selectedScene &&
+              selectedScene.options.map((option, i) => (
+                <Box
+                  key={i}
+                  sx={{
+                    borderLeft: "5px solid brown",
+                    borderRadius: "50px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "lightyellow",
+                    padding: "15px",
+                    opacity: "0.8",
+                    width: "80vw",
+                    maxWidth: "600px",
+                    margin: "10px auto",
+                  }}
+                  onClick={() => {
+                    const nextScene = scene.find(
+                      (s) => s.id === option.nextSceneId
+                    );
+                    if (nextScene) setSelectedScene(nextScene);
+                  }}
+                >
+                  <Typography variant="body2" sx={{ color: "black" }}>
+                    {option.text}
+                  </Typography>
+                </Box>
+              ))}
           </Box>
         </Box>
       </Box>

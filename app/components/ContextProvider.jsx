@@ -16,24 +16,32 @@ export const ContextProvider = ({ children }) => {
   const [scene, setScene] = useState([
     {
       id: 1,
-      title: "Start",
-      description:
-        "Willkommen zum Spiel! Klicke auf 'Level up!' um zu beginnen.",
-      options: [{ text: "Level up!", nextSceneId: 2 }],
+      title: "1",
+      description: "Willkommen zum Spiel! Klicke auf 'Level up!'.",
+      options: [
+        { text: "Szene 2", nextSceneId: 2 },
+        { text: "Szene 3", nextSceneId: 3 },
+      ],
     },
     {
       id: 2,
-      title: "Level 1",
+      title: "2",
       description:
         "Du bist jetzt Level 1! Klicke auf 'Level up!' um weiterzumachen.",
-      options: [{ text: "Level up!", nextSceneId: 3 }],
+      options: [
+        { text: "Szene 1", nextSceneId: 1 },
+        { text: "Szene 3", nextSceneId: 3 },
+        { text: "Szene 2", nextSceneId: 2 },
+      ],
     },
     {
       id: 3,
-      title: "Level 2",
-      description:
-        "Du bist jetzt Level 2! Klicke auf 'Level up!' um weiterzumachen.",
-      options: [{ text: "Level up!", nextSceneId: 4 }],
+      title: "3",
+      description: "Dies ist die letzte Szene.",
+      options: [
+        { text: "Szene 1", nextSceneId: 1 },
+        { text: "Szene 2", nextSceneId: 2 },
+      ],
     },
   ]);
 
