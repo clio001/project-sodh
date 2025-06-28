@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "../globals.css";
 import Selection from "../components/Selection";
 import { useMyContext } from "../components/ContextProvider";
+import Typewriter from "../components/Typewriter";
 
 export default function Page() {
   const { scene } = useMyContext();
@@ -26,14 +27,13 @@ export default function Page() {
           </Typography>
         </Box>
         <Box mb={2}>
-          <Box>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Paper className="container-scenetext" elevation={3}>
               <Typography variant="body2" sx={{ padding: "1rem" }}>
                 {selectedScene.title}
               </Typography>
-              <Typography variant="body2" sx={{ padding: "1rem" }}>
-                {selectedScene.description}
-              </Typography>
+              <Typewriter text={selectedScene.description} speed={35} />
+
               <Typography variant="body2" sx={{ padding: "1rem" }}>
                 {selectedScene.items &&
                   selectedScene.items.map((item, i) => {
