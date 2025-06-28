@@ -33,15 +33,27 @@ export const ContextProvider = ({ children }) => {
         { text: "Szene 3", nextSceneId: 3 },
         { text: "Szene 2", nextSceneId: 2 },
       ],
+      items: [
+        {
+          id: 1,
+          name: "Speisekarte",
+          description: "Speisekarte, Hotel Bristol",
+          type: "menucard",
+        },
+      ],
+      journalEntry: {
+        id: 1,
+        title: "Im StabiKat recherchieren",
+        content:
+          "Der StabiKat ist der zentrale Sucheinstieg für die Sammlungen der Staatsbibliothek zu Berlin.",
+      },
     },
+
     {
       id: 3,
       title: "3",
       description: "Dies ist die letzte Szene.",
-      options: [
-        { text: "Szene 1", nextSceneId: 1 },
-        { text: "Szene 2", nextSceneId: 2 },
-      ],
+      options: [{ text: "Szene 1", nextSceneId: 1 }],
     },
   ]);
 

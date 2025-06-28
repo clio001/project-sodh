@@ -1,5 +1,5 @@
 "use client";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Chip, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "../globals.css";
 import Selection from "../components/Selection";
@@ -33,6 +33,12 @@ export default function Page() {
               </Typography>
               <Typography variant="body2" sx={{ padding: "1rem" }}>
                 {selectedScene.description}
+              </Typography>
+              <Typography variant="body2" sx={{ padding: "1rem" }}>
+                {selectedScene.items &&
+                  selectedScene.items.map((item, i) => {
+                    return <Chip key={i} label={item.description} />;
+                  })}
               </Typography>
             </Paper>
           </Box>
