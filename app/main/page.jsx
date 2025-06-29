@@ -48,8 +48,8 @@ export default function Page() {
                 <Chip
                   label={selectedScene.title}
                   variant="outlined"
+                  className="background-location"
                   sx={{
-                    bgcolor: "lightyellow",
                     border: "2px solid brown",
                     marginRight: "1rem",
                   }}

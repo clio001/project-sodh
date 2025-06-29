@@ -30,6 +30,14 @@
   color: lightgrey;
 }
 
+.background-location {
+  background-image: radial-gradient(circle at center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+}
+
 .button-option {
   border-left: 5px solid brown;
   border-radius: 50px;

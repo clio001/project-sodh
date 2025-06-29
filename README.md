@@ -1,3 +1,26 @@
+## Daten
+
+### db-scenes.json
+
+Jede Szene ist ein Objekt und enthält folgende Felder:
+
+Objekt:
+
+- id: number
+- title: string
+- avatar: string
+- description: string
+- options: list
+  Objekte:
+  - text: string
+  - nextSceneId: number
+- items: list
+  - id: string
+- jounralEntries: list
+  - id: number
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
