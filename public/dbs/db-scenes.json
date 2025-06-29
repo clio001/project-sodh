@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "1",
+    "title": "Info-Punkt",
     "description": "Willkommen in der Stabi! Wir haben gehört, du suchst historische Menükarten. Benötigst du Hilfe?",
     "options": [
       { "text": "Ja, zeige mir bitte, wie ich die Karten finde!", "nextSceneId": 2 },
@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "title": "2",
-    "description": "Herzliche willkommen in der Handschriftenabteilung! Unsere historischen Menükarten findest du in den Digitalisierten Sammlungen oder vor Ort in der Staatsbibliothek zu Berlin.",
+    "title": "Handschriftenabteilung",
+    "description": "Herzlich willkommen in der Handschriftenabteilung! Unsere historischen Menükarten findest du in den Digitalisierten Sammlungen oder vor Ort in der Staatsbibliothek zu Berlin.",
     "options": [
       { "text": "Ich muss nochmal zurück zum Start.", "nextSceneId": 1 },
       { "text": "Na dann weiß ich Bescheid. Wo ist der Ausgang?", "nextSceneId": 3 }
@@ -32,7 +32,7 @@
   },
   {
     "id": 3,
-    "title": "3",
+    "title": "Brunnenhof",
     "description": "Vielen Dank für deinen Besuch in der Stabi! Der Ausgang ist gleich hier links. Wir freuen uns, dich bald wiederzusehen!",
     "options": [
       { "text": "Ich will doch nochmal weiter recherchieren.", "nextSceneId": 2 }

@@ -1,5 +1,5 @@
 "use client";
-import { Box, Chip, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Chip, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "../globals.css";
 import Selection from "../components/Selection";
@@ -32,16 +32,26 @@ export default function Page() {
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: "space-between",
                   marginTop: "-1rem",
                 }}
               >
+                <Avatar
+                  sx={{
+                    border: "2px solid brown",
+                    width: 50,
+                    height: 50,
+                    marginLeft: "1rem",
+                  }}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s"
+                ></Avatar>
                 <Chip
                   label={selectedScene.title}
                   variant="outlined"
                   sx={{
                     bgcolor: "lightyellow",
                     border: "2px solid brown",
+                    marginRight: "1rem",
                   }}
                 />
               </Box>{" "}
