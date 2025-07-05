@@ -14,27 +14,6 @@ export default function Statbar() {
   };
   return (
     <>
-      {/* <Link
-        href="/"
-        style={{
-          textDecoration: "none",
-          color: "inherit",
-          marginRight: "20px",
-        }}
-      >
-        <Typography variant="body2">Home</Typography>
-      </Link>
-      <Link
-        href="/about"
-        style={{
-          textDecoration: "none",
-          color: "inherit",
-          marginRight: "20px",
-        }}
-      >
-        <Typography variant="body2">About</Typography>
-      </Link> */}
-
       <Box
         sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
       >
@@ -71,7 +50,7 @@ export default function Statbar() {
 
       <div>
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-          <Box sx={{ width: "100vw" }}>
+          <Box sx={{ width: "100vw", maxWidth: "650px" }}>
             <Box
               sx={{
                 display: "flex",
