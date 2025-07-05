@@ -62,7 +62,7 @@ export default function Statbar() {
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
           >
-            Inventar
+            Inventory: {player.inventory.items.length}
           </Typography>
         </Box>
       </Box>
