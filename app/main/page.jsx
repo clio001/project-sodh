@@ -55,43 +55,53 @@ export default function Page() {
                 />
               </Box>{" "}
               <Typewriter text={selectedScene.description} speed={35} />
-              {selectedScene.items &&
-                selectedScene.items.map((item, i) => {
-                  return (
-                    <Box key={i}>
-                      {" "}
-                      {inventoryItems.map((inventoryItem) => {
-                        if (inventoryItem.id == item) {
-                          return (
-                            <Chip
-                              key={i + item}
-                              label={"+ " + inventoryItem.title}
-                              sx={{
-                                gap: "0.3rem",
-                                marginLeft: "0.5rem",
-                                marginBottom: "1rem",
-                              }}
-                              onClick={() => {
-                                if (!player.inventory.items.includes(item)) {
-                                  setPlayer({
-                                    ...player,
-                                    xp: player.xp + 25,
-                                    inventory: {
-                                      items: [...player.inventory.items, item],
-                                      journalEntries: [
-                                        ...player.inventory.journalEntries,
-                                      ],
-                                    },
-                                  });
-                                }
-                              }}
-                            />
-                          );
-                        }
-                      })}
-                    </Box>
-                  );
-                })}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                }}
+              >
+                {selectedScene.items &&
+                  selectedScene.items.map((item, i) => {
+                    return (
+                      <div key={i}>
+                        {" "}
+                        {inventoryItems.map((inventoryItem) => {
+                          if (inventoryItem.id == item) {
+                            return (
+                              <Chip
+                                key={i + item}
+                                label={"+ " + inventoryItem.title}
+                                sx={{
+                                  marginLeft: "0.5rem",
+                                  marginBottom: "1rem",
+                                }}
+                                onClick={() => {
+                                  if (!player.inventory.items.includes(item)) {
+                                    setPlayer({
+                                      ...player,
+                                      xp: player.xp + 25,
+                                      inventory: {
+                                        items: [
+                                          ...player.inventory.items,
+                                          item,
+                                        ],
+                                        journalEntries: [
+                                          ...player.inventory.journalEntries,
+                                        ],
+                                      },
+                                    });
+                                  }
+                                }}
+                              />
+                            );
+                          }
+                        })}
+                      </div>
+                    );
+                  })}
+              </Box>
             </Box>
           </Box>
           <Box>
