@@ -5,9 +5,8 @@ import React from "react";
 import { useMyContext } from "./ContextProvider";
 
 export default function Statbar() {
-  const dbjson = useMyContext();
   const [open, setOpen] = React.useState(false);
-  const { items, entries } = useMyContext();
+  const { items, entries, player } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -43,9 +42,9 @@ export default function Statbar() {
       >
         <Typography variant="body2">About</Typography>
       </Link> */}
-      <Typography variant="body2">XP: {dbjson.xp}</Typography>
+      <Typography variant="body2">XP: {player.xp}</Typography>
       <Typography variant="body2" sx={{ marginLeft: "20px" }}>
-        Level: {dbjson.level}
+        Level: {player.level}
       </Typography>
       <Typography
         variant="body2"
