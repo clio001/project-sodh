@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "../globals.css";
 import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
+import Statbar from "../components/Statbar";
 
 export default function Page() {
   const { scene, player, setPlayer, inventoryItems } = useMyContext();
@@ -11,6 +12,7 @@ export default function Page() {
 
   return (
     <main>
+      <Statbar />
       <Box
         sx={{
           display: "flex",

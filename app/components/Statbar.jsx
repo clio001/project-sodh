@@ -11,17 +11,17 @@ export default function Statbar() {
     setOpen(newOpen);
   };
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        backgroundColor: "Brown",
-        color: "lightyellow",
-        padding: "0.5rem",
-      }}
-    >
-      {/* <Link
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          backgroundColor: "Brown",
+          height: "0.75rem",
+        }}
+      >
+        {/* <Link
         href="/"
         style={{
           textDecoration: "none",
@@ -41,17 +41,41 @@ export default function Statbar() {
       >
         <Typography variant="body2">About</Typography>
       </Link> */}
-      <Typography variant="body2">XP: {player.xp}</Typography>
-      <Typography variant="body2" sx={{ marginLeft: "20px" }}>
-        Level: {player.level}
-      </Typography>
-      <Typography
-        variant="body2"
-        sx={{ marginLeft: "20px" }}
-        onClick={toggleDrawer(true)}
+      </Box>
+      <Box
+        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
       >
-        Inventar
-      </Typography>
+        {" "}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            backgroundColor: "Brown",
+            color: "lightyellow",
+            paddingLeft: "4rem",
+            paddingRight: "4rem",
+            paddingTop: "0.5rem",
+            paddingBottom: "0.5rem",
+            borderRadius: "0px 0px 75px 75px",
+            marginTop: "-0.8rem",
+            width: "fit-content",
+          }}
+        >
+          <Typography variant="body2">XP: {player.xp}</Typography>
+          <Typography variant="body2" sx={{ marginLeft: "20px" }}>
+            Level: {player.level}
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{ marginLeft: "20px" }}
+            onClick={toggleDrawer(true)}
+          >
+            Inventar
+          </Typography>
+        </Box>
+      </Box>
+
       <div>
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
           <Box sx={{ width: "100vw" }}>
@@ -141,6 +165,6 @@ export default function Statbar() {
           </Box>
         </Drawer>
       </div>
-    </Box>
+    </>
   );
 }
