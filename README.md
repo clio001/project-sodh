@@ -21,7 +21,7 @@ Objekt:
 
 ## XP-Berechnung
 
-+10 XP pro besuchter Szene
++10 XP pro besuchter Szene (keine Doppelsammlung bei wiederholtem Besuch möglich)
 +25 XP pro gesammeltem Item
 
 ---
