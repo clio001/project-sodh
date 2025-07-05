@@ -58,7 +58,7 @@ export default function Page() {
               {selectedScene.items &&
                 selectedScene.items.map((item, i) => {
                   return (
-                    <>
+                    <Box key={i}>
                       {" "}
                       {inventoryItems.map((inventoryItem) => {
                         if (inventoryItem.id == item) {
@@ -88,7 +88,7 @@ export default function Page() {
                           );
                         }
                       })}
-                    </>
+                    </Box>
                   );
                 })}
             </Box>
