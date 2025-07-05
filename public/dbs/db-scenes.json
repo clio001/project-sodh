@@ -19,6 +19,7 @@
     "items": [
       {
         "id": 1,
+        "ppn": 132546788,
         "name": "Speisekarte",
         "description": "Speisekarte, Hotel Bristol",
         "type": "menucard"

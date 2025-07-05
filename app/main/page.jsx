@@ -63,7 +63,21 @@ export default function Page() {
                       variant="body2"
                       sx={{ padding: "1rem" }}
                     >
-                      <Chip label={item.description} />
+                      <Chip
+                        label={"+ " + item.description}
+                        onClick={() => {
+                          setPlayer({
+                            ...player,
+                            inventory: {
+                              items: [...player.inventory.items, item.ppn],
+                              journalEntries: [
+                                ...player.inventory.journalEntries,
+                              ],
+                            },
+                          });
+                          console.log(player.inventory);
+                        }}
+                      />
                     </Typography>
                   );
                 })}

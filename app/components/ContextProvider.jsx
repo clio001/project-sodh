@@ -15,7 +15,10 @@ export const ContextProvider = ({ children }) => {
     xp: 10,
     level: 1,
     scenesVisited: [1],
-    inventory: {},
+    inventory: {
+      items: [],
+      journalEntries: [],
+    },
   });
 
   //NOTE - Database state variables
