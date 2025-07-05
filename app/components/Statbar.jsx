@@ -12,16 +12,7 @@ export default function Statbar() {
   };
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          backgroundColor: "Brown",
-          height: "0.75rem",
-        }}
-      >
-        {/* <Link
+      {/* <Link
         href="/"
         style={{
           textDecoration: "none",
@@ -41,7 +32,7 @@ export default function Statbar() {
       >
         <Typography variant="body2">About</Typography>
       </Link> */}
-      </Box>
+
       <Box
         sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
       >
@@ -58,7 +49,7 @@ export default function Statbar() {
             paddingTop: "0.5rem",
             paddingBottom: "0.5rem",
             borderRadius: "0px 0px 75px 75px",
-            marginTop: "-0.8rem",
+
             width: "fit-content",
           }}
         >
