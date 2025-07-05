@@ -6,7 +6,7 @@ import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 
 export default function Page() {
-  const { scene, player, setPlayer } = useMyContext();
+  const { scene, player, setPlayer, inventoryItems } = useMyContext();
   const [selectedScene, setSelectedScene] = useState(scene[0]);
 
   return (
@@ -58,27 +58,37 @@ export default function Page() {
               {selectedScene.items &&
                 selectedScene.items.map((item, i) => {
                   return (
-                    <Typography
-                      key={i}
-                      variant="body2"
-                      sx={{ padding: "1rem" }}
-                    >
-                      <Chip
-                        label={"+ " + item.description}
-                        onClick={() => {
-                          setPlayer({
-                            ...player,
-                            inventory: {
-                              items: [...player.inventory.items, item.ppn],
-                              journalEntries: [
-                                ...player.inventory.journalEntries,
-                              ],
-                            },
-                          });
-                          console.log(player.inventory);
-                        }}
-                      />
-                    </Typography>
+                    <>
+                      {" "}
+                      {inventoryItems.map((inventoryItem) => {
+                        if (inventoryItem.id == item) {
+                          return (
+                            <Chip
+                              label={"+ " + inventoryItem.title}
+                              sx={{
+                                gap: "0.3rem",
+                                marginLeft: "0.5rem",
+                                marginBottom: "1rem",
+                              }}
+                              onClick={() => {
+                                if (!player.inventory.items.includes(item)) {
+                                  setPlayer({
+                                    ...player,
+                                    xp: player.xp + 25,
+                                    inventory: {
+                                      items: [...player.inventory.items, item],
+                                      journalEntries: [
+                                        ...player.inventory.journalEntries,
+                                      ],
+                                    },
+                                  });
+                                }
+                              }}
+                            />
+                          );
+                        }
+                      })}
+                    </>
                   );
                 })}
             </Box>

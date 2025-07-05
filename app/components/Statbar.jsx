@@ -1,12 +1,11 @@
 "use client";
-import { Box, Button, Divider, Drawer, Typography } from "@mui/material";
-import Link from "next/link";
+import { Box, Divider, Drawer, Typography } from "@mui/material";
 import React from "react";
 import { useMyContext } from "./ContextProvider";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
-  const { items, entries, player } = useMyContext();
+  const { inventoryItems, entries, player } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -90,7 +89,7 @@ export default function Statbar() {
                   gap: "1rem",
                 }}
               >
-                {items.map((item, key) => (
+                {player.inventory.items.map((item, key) => (
                   <Box
                     sx={{
                       border: "1px solid lightgray",
@@ -100,7 +99,11 @@ export default function Statbar() {
                     }}
                     key={key}
                   >
-                    {item.title}
+                    {inventoryItems.map((inventoryItem, i) => {
+                      if (inventoryItem.id == item) {
+                        return inventoryItem.title;
+                      }
+                    })}
                   </Box>
                 ))}
               </Box>

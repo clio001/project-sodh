@@ -22,7 +22,7 @@ export const ContextProvider = ({ children }) => {
   });
 
   //NOTE - Database state variables
-  const [items, setItems] = useState(DBitems);
+  const [inventoryItems, setInventoryItems] = useState(DBitems);
   const [entries, setEntries] = useState(DBjentries);
   const [scene, setScene] = useState(DBscenes);
 
@@ -31,13 +31,12 @@ export const ContextProvider = ({ children }) => {
       value={{
         player,
         setPlayer,
-        xp,
-        setXp,
+
         level,
         setLevel,
         scene,
-        items,
-        setItems,
+        inventoryItems,
+        setInventoryItems,
         setScene,
         entries,
         setEntries,
