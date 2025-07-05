@@ -91,23 +91,27 @@ export default function Page() {
                   style={{ animationDelay: `${i * 100}ms`, overflow: "hidden" }}
                   className="button-option"
                   onClick={() => {
-                    if (!player.scenesVisited.includes(option.nextSceneId)) {
-                      setPlayer({
-                        ...player,
-                        xp: player.xp + 10,
-                        scenesVisited: [
-                          ...player.scenesVisited,
-                          option.nextSceneId,
-                        ],
-                      });
+                    if (option.nextSceneId != 0) {
+                      if (!player.scenesVisited.includes(option.nextSceneId)) {
+                        setPlayer({
+                          ...player,
+                          xp: player.xp + 10,
+                          scenesVisited: [
+                            ...player.scenesVisited,
+                            option.nextSceneId,
+                          ],
+                        });
 
-                      console.log(player.scenesVisited);
+                        console.log(player.scenesVisited);
+                      }
+
+                      const nextScene = scene.find(
+                        (s) => s.id === option.nextSceneId
+                      );
+                      if (nextScene) setSelectedScene(nextScene);
+                    } else {
+                      window.location.href = "/";
                     }
-
-                    const nextScene = scene.find(
-                      (s) => s.id === option.nextSceneId
-                    );
-                    if (nextScene) setSelectedScene(nextScene);
                   }}
                 >
                   <Typography variant="body2" sx={{ color: "black" }}>

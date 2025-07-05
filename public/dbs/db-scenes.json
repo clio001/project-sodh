@@ -36,7 +36,8 @@
     "title": "Brunnenhof",
     "description": "Vielen Dank für deinen Besuch in der Stabi! Der Ausgang ist gleich hier links. Wir freuen uns, dich bald wiederzusehen!",
     "options": [
-      { "text": "Ich will doch nochmal weiter recherchieren.", "nextSceneId": 2 }
+      { "text": "Ich will doch nochmal weiter recherchieren.", "nextSceneId": 2 },
+      { "text": "Zurück zum Startmenü", "nextSceneId": 0 }
     ]
   }
 ]
