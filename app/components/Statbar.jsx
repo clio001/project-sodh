@@ -2,6 +2,7 @@
 import { Box, Divider, Drawer, Typography } from "@mui/material";
 import React from "react";
 import { useMyContext } from "./ContextProvider";
+import "../globals.css";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
@@ -49,7 +50,6 @@ export default function Statbar() {
             paddingTop: "0.5rem",
             paddingBottom: "0.5rem",
             borderRadius: "0px 0px 75px 75px",
-
             width: "fit-content",
           }}
         >
@@ -58,11 +58,12 @@ export default function Statbar() {
             Level: {player.level}
           </Typography>
           <Typography
+            className="inventoryButton"
             variant="body2"
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
           >
-            Inventory: {player.inventory.items.length}
+            Inventory: <span>{player.inventory.items.length}</span>
           </Typography>
         </Box>
       </Box>
