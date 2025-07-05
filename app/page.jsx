@@ -1,12 +1,8 @@
 "use client";
 import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
-import { useState } from "react";
-import { useMyContext } from "./components/ContextProvider";
 
 export default function Home() {
-  const { setXp } = useMyContext();
-
   return (
     <Box
       sx={{
