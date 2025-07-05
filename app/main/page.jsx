@@ -58,7 +58,7 @@ export default function Page() {
               {selectedScene.items &&
                 selectedScene.items.map((item, i) => {
                   return (
-                    <Box key={i}>
+                    <Box key={i + 12}>
                       {" "}
                       {inventoryItems.map((inventoryItem) => {
                         if (inventoryItem.id == item) {
