@@ -3,6 +3,7 @@ import { Box, Divider, Drawer, Typography } from "@mui/material";
 import React from "react";
 import { useMyContext } from "./ContextProvider";
 import "../globals.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
@@ -81,14 +82,12 @@ export default function Statbar() {
               <Typography variant="h6" sx={{ padding: "3rem" }}>
                 Inventar
               </Typography>
-              <Typography
+
+              <CloseIcon
                 className="cursorPointer"
-                variant=""
                 onClick={toggleDrawer(false)}
-                sx={{ padding: "1rem" }}
-              >
-                X
-              </Typography>
+                sx={{ margin: "1rem" }}
+              />
             </Box>
             <Box sx={{ padding: "1rem" }}>
               <Divider>
@@ -102,27 +101,34 @@ export default function Statbar() {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
+                  justifyContent: "center",
                   flexWrap: "wrap",
                   gap: "1rem",
                 }}
               >
-                {player.inventory.items.map((item, key) => (
-                  <Box
-                    sx={{
-                      border: "1px solid lightgray",
-                      padding: "1rem",
-                      borderRadius: "8px",
-                      backgroundColor: "lightyellow",
-                    }}
-                    key={key}
-                  >
-                    {inventoryItems.map((inventoryItem, i) => {
-                      if (inventoryItem.id == item) {
-                        return inventoryItem.title;
-                      }
-                    })}
-                  </Box>
-                ))}
+                {player.inventory.items.length == 0 ? (
+                  <Typography variant="body2" color="grey" mt={3} mb={2}>
+                    Noch keine Objekte vorhanden ...
+                  </Typography>
+                ) : (
+                  player.inventory.items.map((item, key) => (
+                    <Box
+                      sx={{
+                        border: "1px solid lightgray",
+                        padding: "1rem",
+                        borderRadius: "8px",
+                        backgroundColor: "lightyellow",
+                      }}
+                      key={key}
+                    >
+                      {inventoryItems.map((inventoryItem, i) => {
+                        if (inventoryItem.id == item) {
+                          return inventoryItem.title;
+                        }
+                      })}
+                    </Box>
+                  ))
+                )}
               </Box>
             </Box>
             <Box sx={{ padding: "1rem" }}>
@@ -136,6 +142,7 @@ export default function Statbar() {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
+                  justifyContent: "center",
                   flexWrap: "wrap",
                   gap: "1rem",
                 }}
