@@ -16,15 +16,7 @@
       { "text": "Ich muss nochmal zurück zum Start.", "nextSceneId": 1 },
       { "text": "Na dann weiß ich Bescheid. Wo ist der Ausgang?", "nextSceneId": 3 }
     ],
-    "items": [
-      {
-        "id": 1,
-        "ppn": 132546788,
-        "name": "Speisekarte",
-        "description": "Speisekarte, Hotel Bristol",
-        "type": "menucard"
-      }
-    ],
+    "items": [1, 3],
     "journalEntry": {
       "id": 1,
       "title": "Im StabiKat recherchieren",
