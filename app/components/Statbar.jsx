@@ -58,7 +58,7 @@ export default function Statbar() {
             Level: {player.level}
           </Typography>
           <Typography
-            className="inventoryButton"
+            className="cursorPointer"
             variant="body2"
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
@@ -82,6 +82,7 @@ export default function Statbar() {
                 Inventar
               </Typography>
               <Typography
+                className="cursorPointer"
                 variant=""
                 onClick={toggleDrawer(false)}
                 sx={{ padding: "1rem" }}

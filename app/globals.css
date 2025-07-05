@@ -38,7 +38,7 @@
   border: 2px solid transparent;
 }
 
-.inventoryButton:hover {
+.cursorPointer:hover {
   cursor: pointer;
 }
 
