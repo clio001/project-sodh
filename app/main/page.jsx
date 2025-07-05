@@ -58,12 +58,13 @@ export default function Page() {
               {selectedScene.items &&
                 selectedScene.items.map((item, i) => {
                   return (
-                    <Box key={i + 12}>
+                    <Box key={i}>
                       {" "}
                       {inventoryItems.map((inventoryItem) => {
                         if (inventoryItem.id == item) {
                           return (
                             <Chip
+                              key={i + item}
                               label={"+ " + inventoryItem.title}
                               sx={{
                                 gap: "0.3rem",
