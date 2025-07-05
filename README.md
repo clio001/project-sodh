@@ -19,6 +19,11 @@ Objekt:
 - jounralEntries: list
   - id: number
 
+## XP-Berechnung
+
++10 XP pro besuchter Szene
++25 XP pro gesammeltem Item
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
