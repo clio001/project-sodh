@@ -17,7 +17,12 @@ Objekt:
 - items: list
   - id: string
 - jounralEntries: list
+
   - id: number
+
+### db-items.json
+
+### db-entries.json
 
 ## XP-Berechnung
 
