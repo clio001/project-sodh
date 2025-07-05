@@ -28,13 +28,6 @@ export default function Home() {
           gap: "10px",
         }}
       >
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => setXp((prev) => prev + 10)}
-        >
-          +10 XP
-        </Button>
         <Link href="/main">
           <Button variant="contained" color="secondary">
             Start
