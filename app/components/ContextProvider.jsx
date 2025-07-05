@@ -14,7 +14,7 @@ export const ContextProvider = ({ children }) => {
   const [player, setPlayer] = useState({
     xp: 10,
     level: 1,
-    scenesVisited: [],
+    scenesVisited: [1],
     inventory: {},
   });
 

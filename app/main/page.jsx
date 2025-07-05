@@ -1,13 +1,12 @@
 "use client";
-import { Avatar, Box, Chip, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Chip, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "../globals.css";
-import Selection from "../components/Selection";
 import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 
 export default function Page() {
-  const { scene } = useMyContext();
+  const { scene, player, setPlayer } = useMyContext();
   const [selectedScene, setSelectedScene] = useState(scene[0]);
 
   return (
@@ -78,6 +77,19 @@ export default function Page() {
                   style={{ animationDelay: `${i * 100}ms`, overflow: "hidden" }}
                   className="button-option"
                   onClick={() => {
+                    if (!player.scenesVisited.includes(option.nextSceneId)) {
+                      setPlayer({
+                        ...player,
+                        xp: player.xp + 10,
+                        scenesVisited: [
+                          ...player.scenesVisited,
+                          option.nextSceneId,
+                        ],
+                      });
+
+                      console.log(player.scenesVisited);
+                    }
+
                     const nextScene = scene.find(
                       (s) => s.id === option.nextSceneId
                     );
