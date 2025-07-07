@@ -18,14 +18,12 @@ export default function Page() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "90vh",
+          height: "95vh",
           justifyContent: "space-between",
         }}
       >
         <Box>
-          <Typography variant="body1" sx={{ padding: "1rem" }}>
-            Grafik
-          </Typography>
+          <Typography variant="body1" sx={{ padding: "1rem" }}></Typography>
         </Box>
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -114,25 +112,70 @@ export default function Page() {
                   style={{ animationDelay: `${i * 100}ms`, overflow: "hidden" }}
                   className="button-option"
                   onClick={() => {
+                    // Check if player wants to exit game
                     if (option.nextSceneId != 0) {
-                      if (!player.scenesVisited.includes(option.nextSceneId)) {
-                        setPlayer({
-                          ...player,
-                          xp: player.xp + 10,
-                          scenesVisited: [
-                            ...player.scenesVisited,
-                            option.nextSceneId,
-                          ],
-                        });
-
-                        console.log(player.scenesVisited);
-                      }
-
+                      // Check if an item is required to access scene
                       const nextScene = scene.find(
                         (s) => s.id === option.nextSceneId
                       );
-                      if (nextScene) setSelectedScene(nextScene);
+                      if (nextScene.required) {
+                        // Check if required item exists in player inventory
+                        if (
+                          player.inventory.items.includes(
+                            nextScene.required.item
+                          )
+                        ) {
+                          // If item exists, continue with the next scene in option
+                          if (
+                            !player.scenesVisited.includes(option.nextSceneId)
+                          ) {
+                            setPlayer({
+                              ...player,
+                              xp: player.xp + 10,
+                              scenesVisited: [
+                                ...player.scenesVisited,
+                                option.nextSceneId,
+                              ],
+                            });
+
+                            console.log(player.scenesVisited);
+                          }
+
+                          const nextScene = scene.find(
+                            (s) => s.id === option.nextSceneId
+                          );
+                          if (nextScene) setSelectedScene(nextScene);
+                        } else {
+                          // If item is missing, continue with refused scene from scene object
+                          const refusedScene = scene.find(
+                            (s) => s.id === nextScene.required.refusedSceneId
+                          );
+                          if (refusedScene) setSelectedScene(refusedScene);
+                        }
+                      } else {
+                        // If not item is required continue with options id
+                        if (
+                          !player.scenesVisited.includes(option.nextSceneId)
+                        ) {
+                          setPlayer({
+                            ...player,
+                            xp: player.xp + 10,
+                            scenesVisited: [
+                              ...player.scenesVisited,
+                              option.nextSceneId,
+                            ],
+                          });
+
+                          console.log(player.scenesVisited);
+                        }
+
+                        const nextScene = scene.find(
+                          (s) => s.id === option.nextSceneId
+                        );
+                        if (nextScene) setSelectedScene(nextScene);
+                      }
                     } else {
+                      // If options scene id is 0 sent player to home page
                       window.location.href = "/";
                     }
                   }}
