@@ -18,7 +18,7 @@ export default function Page() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "95vh",
+          height: "92vh",
           justifyContent: "space-between",
         }}
       >
