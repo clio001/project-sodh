@@ -1,7 +1,6 @@
-"use client"; // If you're using the App Router
+"use client";
 
 import { useRef, useState } from "react";
-import { Button } from "@mui/material";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import MusicOffIcon from "@mui/icons-material/MusicOff";
 
