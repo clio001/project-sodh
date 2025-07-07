@@ -1,9 +1,17 @@
 "use client";
-import { Box, Divider, Drawer, Typography } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  Divider,
+  Drawer,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@mui/material";
+import React, { useState } from "react";
 import { useMyContext } from "./ContextProvider";
 import "../globals.css";
 import CloseIcon from "@mui/icons-material/Close";
+import MusicPlayer from "./MusicPlayer";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
@@ -12,6 +20,7 @@ export default function Statbar() {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
   return (
     <>
       <Box
@@ -33,7 +42,11 @@ export default function Statbar() {
             width: "fit-content",
           }}
         >
-          <Typography variant="body2">XP: {player.xp}</Typography>
+          <MusicPlayer />
+
+          <Typography variant="body2" sx={{ marginLeft: "20px" }}>
+            XP: {player.xp}
+          </Typography>
           <Typography variant="body2" sx={{ marginLeft: "20px" }}>
             Level: {player.level}
           </Typography>
