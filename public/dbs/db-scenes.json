@@ -9,47 +9,7 @@
       { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }
     ]
   },
-  {
-    "id": 4,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
-    "location": "Info-Punkt",
-    "description": "Frag mal bei Greta nach! Die weiß sowas immer. Sie sitzt im Lesesaal Vivarium.",
-    "options": [
-      { "text": "Gehe zum Lesesaal Vivarium!", "nextSceneId": 5 },
-      { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }
-    ]
-  },
-  {
-    "id": 5,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
-    "location": "Info-Punkt",
-    "description": "Moment mal, Freundchen! Wo is'n deine Anmeldung für den Lesesaal Vivarium?",
-    "options": [
-      { "text": "Welche Anmeldung?", "nextSceneId": 6 },
-      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
-    ]
-  },
-  {
-    "id": 6,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
-    "location": "Info-Punkt",
-    "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb-spk-berlin.de",
-    "options": [
-      { "text": "Melde dich an und gehe zu Greta!", "nextSceneId": 7 },
-      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
-    ]
-  },
-  {
-    "id": 7,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
-    "location": "E-Mail",
-    "description": "Vielen Dank für Ihre Anmeldung! Sie können nun den Lesesaal Vivarium nutzen. Wir freuen uns auf Ihren Besuch.",
-    "options": [
-      { "text": "Melde dich an und gehe zu Greta!", "nextSceneId": 2 },
-      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
-    ],
-    "items":[4]
-  },
+ 
   {
     "id": 2,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
@@ -75,5 +35,45 @@
       { "text": "Ich will doch nochmal weiter recherchieren.", "nextSceneId": 2 },
       { "text": "Ich muss hier raus!!!", "nextSceneId": 0 }
     ]
+  }, {
+    "id": 4,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info-Punkt",
+    "description": "Frag mal bei Greta nach! Die weiß sowas immer. Sie sitzt im Lesesaal Vivarium.",
+    "options": [
+      { "text": "Gehe zum Lesesaal Vivarium!", "nextSceneId": 5 },
+      { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }
+    ]
+  },
+  {
+    "id": 5,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info-Punkt",
+    "description": "Moment mal, Freundchen! Wo is'n deine Anmeldung für den Lesesaal Vivarium?",
+    "options": [
+      { "text": "Welche Anmeldung?", "nextSceneId": 6 },
+      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
+    ]
+  },
+  {
+    "id": 6,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info-Punkt",
+    "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb-spk-berlin.de",
+    "options": [
+      { "text": "Schreibe die E-Mail!", "nextSceneId": 7 },
+      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
+    ]
+  },
+  {
+    "id": 7,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "E-Mail",
+    "description": "Vielen Dank für Ihre Anmeldung! Sie können nun den Lesesaal Vivarium nutzen. Wir freuen uns auf Ihren Besuch.",
+    "options": [
+      { "text": "Gehe zu Greta!", "nextSceneId": 2 },
+      { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
+    ],
+    "items":[4]
   }
 ]
