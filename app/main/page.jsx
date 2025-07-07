@@ -44,10 +44,10 @@ export default function Page() {
                     height: 50,
                     marginLeft: "1rem",
                   }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s"
+                  src={selectedScene.avatar}
                 ></Avatar>
                 <Chip
-                  label={selectedScene.title}
+                  label={selectedScene.location}
                   variant="outlined"
                   className="background-location"
                   sx={{
