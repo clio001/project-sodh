@@ -31,9 +31,9 @@ export default function MusicPlayer() {
       />
 
       {isPlaying ? (
-        <MusicOffIcon fontSize="small" onClick={handleTogglePlay} />
-      ) : (
         <MusicNoteIcon fontSize="small" onClick={handleTogglePlay} />
+      ) : (
+        <MusicOffIcon fontSize="small" onClick={handleTogglePlay} />
       )}
     </div>
   );
