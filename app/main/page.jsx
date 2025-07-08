@@ -7,7 +7,8 @@ import Typewriter from "../components/Typewriter";
 import Statbar from "../components/Statbar";
 
 export default function Page() {
-  const { scene, player, setPlayer, inventoryItems } = useMyContext();
+  const { scene, player, setPlayer, inventoryItems, inventoryEntries } =
+    useMyContext();
   const [selectedScene, setSelectedScene] = useState(scene[0]);
 
   return (
@@ -62,6 +63,7 @@ export default function Page() {
                   flexWrap: "wrap",
                 }}
               >
+                {/* // Check for items  */}
                 {selectedScene.items &&
                   selectedScene.items.map((item, i) => {
                     return (
@@ -101,6 +103,51 @@ export default function Page() {
                       </div>
                     );
                   })}
+                {/* Check for journal entries */}
+                {selectedScene.journalEntries &&
+                  selectedScene.journalEntries.map((entry, i) => {
+                    console.log(entry);
+                    return (
+                      <div key={i}>
+                        {" "}
+                        {inventoryEntries.map((inventoryEntry) => {
+                          if (inventoryEntry.id == entry) {
+                            return (
+                              <Chip
+                                key={i + entry}
+                                variant="outlined"
+                                label={"+ " + inventoryEntry.name}
+                                sx={{
+                                  marginLeft: "0.5rem",
+                                  marginBottom: "1rem",
+                                  borderColor: "pink",
+                                }}
+                                onClick={() => {
+                                  if (
+                                    !player.inventory.journalEntries.includes(
+                                      entry
+                                    )
+                                  ) {
+                                    setPlayer({
+                                      ...player,
+                                      xp: player.xp + 25,
+                                      inventory: {
+                                        items: [...player.inventory.items],
+                                        journalEntries: [
+                                          ...player.inventory.journalEntries,
+                                          entry,
+                                        ],
+                                      },
+                                    });
+                                  }
+                                }}
+                              />
+                            );
+                          }
+                        })}
+                      </div>
+                    );
+                  })}
               </Box>
             </Box>
           </Box>
@@ -114,18 +161,19 @@ export default function Page() {
                   onClick={() => {
                     // Check if player wants to exit game
                     if (option.nextSceneId != 0) {
-                      // Check if an item is required to access scene
+                      // Check if anything is required to access scene
                       const nextScene = scene.find(
                         (s) => s.id === option.nextSceneId
                       );
                       if (nextScene.required) {
-                        // Check if required item exists in player inventory
+                        console.log(player.inventory.journalEntries);
+                        // Check if required journalEntry exists in player inventory
                         if (
-                          player.inventory.items.includes(
-                            nextScene.required.item
+                          player.inventory.journalEntries.includes(
+                            nextScene.required.journalEntry
                           )
                         ) {
-                          // If item exists, continue with the next scene in option
+                          // If journalEntry exists, continue with the next scene in option
                           if (
                             !player.scenesVisited.includes(option.nextSceneId)
                           ) {
@@ -146,14 +194,14 @@ export default function Page() {
                           );
                           if (nextScene) setSelectedScene(nextScene);
                         } else {
-                          // If item is missing, continue with refused scene from scene object
+                          // If journalEntry is missing, continue with refused scene from scene object
                           const refusedScene = scene.find(
                             (s) => s.id === nextScene.required.refusedSceneId
                           );
                           if (refusedScene) setSelectedScene(refusedScene);
                         }
                       } else {
-                        // If not item is required continue with options id
+                        // If nothing is required continue with options id
                         if (
                           !player.scenesVisited.includes(option.nextSceneId)
                         ) {

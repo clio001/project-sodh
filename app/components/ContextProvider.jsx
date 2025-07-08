@@ -23,7 +23,7 @@ export const ContextProvider = ({ children }) => {
 
   //NOTE - Database state variables
   const [inventoryItems, setInventoryItems] = useState(DBitems);
-  const [entries, setEntries] = useState(DBjentries);
+  const [inventoryEntries, setInventoryEntries] = useState(DBjentries);
   const [scene, setScene] = useState(DBscenes);
 
   return (
@@ -38,8 +38,8 @@ export const ContextProvider = ({ children }) => {
         inventoryItems,
         setInventoryItems,
         setScene,
-        entries,
-        setEntries,
+        inventoryEntries,
+        setInventoryEntries,
       }}
     >
       {children}

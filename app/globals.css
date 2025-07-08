@@ -30,6 +30,15 @@
   color: lightgrey;
 }
 
+.inventoryJournalEntry {
+  background-image: radial-gradient(circle at top, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 1rem;
+  border-left: 4px solid brown;
+}
+
 .background-location {
   background-image: radial-gradient(circle at center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
