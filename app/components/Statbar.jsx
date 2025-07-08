@@ -90,7 +90,7 @@ export default function Statbar() {
             <Box sx={{ padding: "1rem" }}>
               <Divider>
                 <Typography variant="subtitle1" p={2}>
-                  Objekte
+                  Menükarten
                 </Typography>
               </Divider>
 
@@ -106,7 +106,7 @@ export default function Statbar() {
               >
                 {player.inventory.items.length == 0 ? (
                   <Typography variant="body2" color="grey" mt={3} mb={2}>
-                    Noch keine Objekte vorhanden ...
+                    Noch keine Menükarten vorhanden ...
                   </Typography>
                 ) : (
                   player.inventory.items.map((item, x) => (
