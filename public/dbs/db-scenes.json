@@ -6,8 +6,7 @@
     "description": "Willkommen in der Stabi! Wir haben gehört, du suchst historische Menükarten. Benötigst du Hilfe?",
     "options": [
       { "text": "Dringendst! Wo finde ich die Menükarten?", "nextSceneId": 4 },
-      { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }
-    ]
+      { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }]
   },
  
   {
