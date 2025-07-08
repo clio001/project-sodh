@@ -1,14 +1,14 @@
 [
     {
       "id": "1",
-      "name": "Recherche im StabiKat",
-      "description": "A classic film camera from the 1960s.",
+      "name": "Im Lesesaal anmelden",
+      "description": "Eine Anmeldung ist nötig, um einen Arbeitsplatz im Lesesaal Vivarium für Historische Drucke und Handschriften nutzen zu können. Melde dich einfach via E-Mail an hdh@sbb.spk-berlin.de an.",
       "image": "https://example.com/images/vintage-camera.jpg"
     },
     {
       "id": "2",
-      "name": "Recherche in den Digitalisierten Sammlungen",
-      "description": "Handcrafted notebook with leather cover and recycled paper.",
+      "name": "SBB-Blog zur Sammlung Menükarten",
+      "description": "Die Menükartensammlung der Handschriftenabteilung der Staatsbibliothek zu Berlin – Preußischer Kulturbesitz bietet einen Überblick über den Bedeutungswandel dieser speziellen grafischen Gattung seit ihrer Entstehung im 18. Jahrhundert. Die Menükarten enthalten vor allem die Speisenfolge, aber auch Angaben zu Getränken, Begleitmusik und weiteren Darbietungen auf Hochzeiten, Bällen und Schiffsreisen. Einige der Sammlungsobjekte zeichnen sich durch goldenen Verzierungen, Wappen, spielerische Ornamente sowie detaillierte Illustrationen aus.",
       "image": "https://example.com/images/leather-notebook.jpg"
     },
     {

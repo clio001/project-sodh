@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "ppn": "123456789",
+      "ppn": "1778979661",
       "manifest": "https://example.org/iiif/manifest/1",
       "title": "Hotel Bristol, Menükarte",
       "creator": "Rudolf Dressel",
@@ -11,9 +11,9 @@
     },
     {
       "id": "2",
-      "ppn": "987654321",
+      "ppn": "1778979459",
       "manifest": "https://example.org/iiif/manifest/2",
-      "title": "Hotel Adlon, Speisekarte",
+      "title": "Menükarte: Königliche Abendtafel, S.M. Yacht Hohenzollern",
       "creator": "John Smith",
       "place": "Berlin",
       "publisher": "Knowledge House",
