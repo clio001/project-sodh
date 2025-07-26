@@ -63,7 +63,8 @@
       { "text": "Gehe zu Greta!", "nextSceneId": 2 },
       { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
     ],
-    "journalEntries": [1]
+    "journalEntries": [1],
+    "badges": 1
   },
   {
     "id": 7,

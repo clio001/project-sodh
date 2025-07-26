@@ -5,6 +5,7 @@ import { createContext } from "react";
 import DBitems from "../../public/dbs/db-items.json";
 import DBjentries from "../../public/dbs/db-journal.json";
 import DBscenes from "../../public/dbs/db-scenes.json";
+import DBbadges from "../../public/dbs/db-badges.json";
 const MyContextProvider = createContext();
 
 export const ContextProvider = ({ children }) => {
@@ -26,6 +27,7 @@ export const ContextProvider = ({ children }) => {
   const [inventoryItems, setInventoryItems] = useState(DBitems);
   const [inventoryEntries, setInventoryEntries] = useState(DBjentries);
   const [scene, setScene] = useState(DBscenes);
+  const [inventoryBadges, setInventoryBadges] = useState(DBbadges);
 
   return (
     <MyContextProvider.Provider
@@ -40,6 +42,8 @@ export const ContextProvider = ({ children }) => {
         setScene,
         inventoryEntries,
         setInventoryEntries,
+        inventoryBadges,
+        setInventoryBadges,
       }}
     >
       {children}
