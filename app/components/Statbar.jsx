@@ -77,9 +77,7 @@ export default function Statbar() {
                 justifyContent: "space-between",
               }}
             >
-              <Typography variant="h4" sx={{ padding: "3rem" }}>
-                Schreibtisch
-              </Typography>
+              <h1 style={{ padding: "2rem" }}>Schreibtisch</h1>
 
               <CloseIcon
                 className="cursorPointer"
@@ -104,6 +102,7 @@ export default function Statbar() {
                           <Tooltip
                             key={e}
                             title={inventoryBadge.name}
+                            color={inventoryBadge.color}
                             placement="top"
                           >
                             <MilitaryTechIcon />
