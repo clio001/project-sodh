@@ -92,6 +92,7 @@ export default function Page() {
                                         journalEntries: [
                                           ...player.inventory.journalEntries,
                                         ],
+                                        badges: [...player.inventory.badges],
                                       },
                                     });
                                   }
@@ -137,6 +138,7 @@ export default function Page() {
                                           ...player.inventory.journalEntries,
                                           entry,
                                         ],
+                                        badges: [...player.inventory.badges],
                                       },
                                     });
                                   }
