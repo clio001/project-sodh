@@ -58,7 +58,7 @@ export default function Statbar() {
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
           >
-            Inventar:{" "}
+            Schreibtisch:{" "}
             <span>
               {player.inventory.items.length +
                 player.inventory.journalEntries.length}
@@ -78,7 +78,7 @@ export default function Statbar() {
               }}
             >
               <Typography variant="h4" sx={{ padding: "3rem" }}>
-                Inventar
+                Schreibtisch
               </Typography>
 
               <CloseIcon
@@ -87,6 +87,7 @@ export default function Statbar() {
                 sx={{ margin: "1rem" }}
               />
             </Box>
+            {}
             <Box sx={{ padding: "1rem" }}>
               <Divider>
                 <Typography variant="subtitle1" p={2}>
