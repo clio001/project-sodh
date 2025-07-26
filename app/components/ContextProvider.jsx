@@ -9,7 +9,6 @@ import DBbadges from "../../public/dbs/db-badges.json";
 const MyContextProvider = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [xp, setXp] = useState(10);
   const [level, setLevel] = useState(2);
 
   const [player, setPlayer] = useState({
@@ -19,7 +18,7 @@ export const ContextProvider = ({ children }) => {
     inventory: {
       items: [],
       journalEntries: [],
-      badges: [1],
+      badges: [1, 2],
     },
   });
 

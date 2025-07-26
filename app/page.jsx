@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,25 +13,53 @@ export default function Home() {
         height: "90vh",
       }}
     >
-      <Typography variant="h5" mb={3}>
-        PROJECT SODH
-      </Typography>
+      <Box sx={{ textAlign: "center" }}>
+        <h1>Das Geheimnis von Rudolf Dressler</h1>
+      </Box>
+
+      <Divider
+        sx={{
+          width: "80%",
+          maxWidth: 450,
+          marginTop: "2rem",
+          marginBottom: "1rem",
+        }}
+      />
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           justifyContent: "center",
-          gap: "10px",
+          gap: "5px",
         }}
       >
-        <Link href="/main">
-          <Button variant="contained" color="secondary">
-            Start
-          </Button>
+        <Link href="/main" style={{ textDecoration: "none" }}>
+          <Box className="button-landingPage" sx={{ textAlign: "center" }}>
+            START
+          </Box>
+        </Link>
+        <Link href="/sammlung" style={{ textDecoration: "none" }}>
+          <Box className="button-landingPage" sx={{ textAlign: "center" }}>
+            DIE SAMMLUNG
+          </Box>
+        </Link>
+        <Link href="/credits" style={{ textDecoration: "none" }}>
+          <Box className="button-landingPage" sx={{ textAlign: "center" }}>
+            CREDITS
+          </Box>
         </Link>
       </Box>
-
-      <Typography mt={5}>A world of delicacies awaits ...</Typography>
+      <Divider
+        sx={{
+          width: "80%",
+          maxWidth: 450,
+          marginTop: "1rem",
+          marginBottom: "2rem",
+        }}
+      />
+      <Typography variant="caption" color="grey">
+        Version 0.1.0
+      </Typography>
     </Box>
   );
 }

@@ -66,6 +66,32 @@
   margin: 10px auto;
   cursor: pointer;
 
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.button-landingPage {
+  border: 2px solid transparent;
+  border-radius: 0px;
+  background-image: radial-gradient(circle at top center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 15px;
+  font-weight: bold;
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+  color: brown;
+  box-shadow: 0px 0px 5px 2px lightgrey;
+
   animation: fadeIn 0.7s ease;
 }
 @keyframes fadeIn {
@@ -75,4 +101,8 @@
   to {
     opacity: 1;
   }
+}
+
+.button-landingPage:hover {
+  box-shadow: 0px 0px 0px 6px brown;
 }
