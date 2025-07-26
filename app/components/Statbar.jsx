@@ -92,6 +92,7 @@ export default function Statbar() {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
+                  gap: "0.5rem",
                 }}
               >
                 {player.inventory.badges.map((badge, i) => (
@@ -105,7 +106,7 @@ export default function Statbar() {
                             color={inventoryBadge.color}
                             placement="top"
                           >
-                            <MilitaryTechIcon />
+                            <MilitaryTechIcon fontSize="large" />
                           </Tooltip>
                         );
                       return null;
