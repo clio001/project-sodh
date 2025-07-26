@@ -11,7 +11,7 @@
  
   {
     "id": 2,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Lesesaal Vivarium",
     "description": "Tachchen, meen Name is Greta! Ick arbeite hier inna Abteilung für Historische Drucke. Ick hab' dir ma' zwee historische Menükarten herausjesucht. Da knurrt einem gleich der Magen! ",
     "options": [
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Brunnenhof",
     "description": "Vielen Dank für deinen Besuch in der Stabi! Wir freuen uns dich bald wiederzusehen.",
     "options": [
@@ -58,7 +58,7 @@
     "id": 6,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
     "location": "Info-Punkt",
-    "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb-spk-berlin.de",
+    "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb.spk-berlin.de",
     "options": [
       { "text": "Gehe zu Greta!", "nextSceneId": 2 },
       { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
@@ -68,7 +68,7 @@
   },
   {
     "id": 7,
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Lesesaal Vivarium",
     "description": "Die Sammlung gelangte 1916 durch eine Schenkung des Privatgelehrten Dr. Georg August Freund in den Besitz der Staatsbibliothek und umfasst knapp 3000 Karten. Einen Schwerpunkt bilden die Menükarten des kaiserlichen Hofes unter Wilhelm II. Der SBB-Blog hat dazu einen spannenden Beitrag!",
     "options": [
