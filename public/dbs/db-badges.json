@@ -3,12 +3,14 @@
       "id": "1",
       "name": "Stabi-Expert:in",
       "description": "Du bist Expert:in der Stabi.",
+      "color": "info",
       "imageUrl": ""
     },
     {
       "id": "2",
       "name": "Menükarten-Sammler:in",
       "description": "Du hast bereits zwei Menükarten gesammelt.",
+      "color": "success",
       "imageUrl": ""
     }
 ]
