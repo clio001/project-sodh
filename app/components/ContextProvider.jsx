@@ -18,6 +18,7 @@ export const ContextProvider = ({ children }) => {
     inventory: {
       items: [],
       journalEntries: [],
+      badges: [1],
     },
   });
 
@@ -31,7 +32,6 @@ export const ContextProvider = ({ children }) => {
       value={{
         player,
         setPlayer,
-
         level,
         setLevel,
         scene,
