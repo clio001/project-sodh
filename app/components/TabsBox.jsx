@@ -12,11 +12,18 @@ function TabsBox() {
   return (
     <div>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "lightgrey" }}>
-          <TabList onChange={handleChange} aria-label="Schreibtisch Tabs">
-            <Tab label="Objekte" value="1" sx={{ borderStyle: "solid" }} />
+        <Box
+          sx={{ borderBottom: 1, borderColor: "lightgrey", marginTop: "1rem" }}
+        >
+          <TabList
+            onChange={handleChange}
+            aria-label="Schreibtisch Tabs"
+            textColor=""
+            indicatorColor="secondary"
+          >
+            <Tab label="Objekte" value="1" />
             <Tab label="Journal" value="2" />
-            <Tab label="Badges" value="3" />
+            <Tab label="Grammophon" value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">

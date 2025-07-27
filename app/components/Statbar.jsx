@@ -62,7 +62,7 @@ export default function Statbar() {
 
       <div>
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-          <Box sx={{ width: "100vw", maxWidth: "500px" }}>
+          <Box sx={{ width: "100vw", maxWidth: "800px" }}>
             <Box
               sx={{
                 display: "flex",
@@ -79,7 +79,7 @@ export default function Statbar() {
               />
             </Box>
             <BadgesBox />
-            <TabsBox />
+            <TabsBox style={{ marginTop: "10rem" }} />
           </Box>
         </Drawer>
       </div>
