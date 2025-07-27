@@ -19,7 +19,7 @@ function ObjectsBox() {
       >
         {player.inventory.items.length == 0 ? (
           <Typography variant="body2" color="grey" mt={3} mb={2}>
-            Noch keine Menükarten vorhanden ...
+            Noch keine Objekte vorhanden ...
           </Typography>
         ) : (
           player.inventory.items.map((item, x) => (
