@@ -14,14 +14,17 @@ export default function Home() {
       }}
     >
       <Box sx={{ textAlign: "center" }}>
-        <h1>Das Geheimnis von Rudolf Dressler</h1>
+        <h1>RetroBites</h1>
+        <h4 style={{ marginTop: "0.7rem" }}>
+          Eine kulinarische Reise durch das Berlin der Jahrhundertwende
+        </h4>
       </Box>
 
       <Divider
         sx={{
           width: "80%",
           maxWidth: 450,
-          marginTop: "2rem",
+          marginTop: "3rem",
           marginBottom: "1rem",
         }}
       />
