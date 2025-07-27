@@ -6,6 +6,7 @@ import "../globals.css";
 import CloseIcon from "@mui/icons-material/Close";
 import MusicPlayer from "./MusicPlayer";
 import BadgesBox from "./BadgesBox";
+import TabsBox from "./TabsBox";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
@@ -80,6 +81,7 @@ export default function Statbar() {
             </Box>
 
             <BadgesBox />
+            <TabsBox />
 
             <Box sx={{ padding: "1rem" }}>
               <Divider>
