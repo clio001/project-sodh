@@ -1,18 +1,11 @@
 "use client";
-import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  Typography,
-  Tooltip,
-} from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button, Divider, Drawer, Typography } from "@mui/material";
+import React from "react";
 import { useMyContext } from "./ContextProvider";
 import "../globals.css";
 import CloseIcon from "@mui/icons-material/Close";
-import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import MusicPlayer from "./MusicPlayer";
+import BadgesBox from "./BadgesBox";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
@@ -85,38 +78,9 @@ export default function Statbar() {
                 sx={{ margin: "1rem" }}
               />
             </Box>
-            {player.inventory.badges.length > 0 ? (
-              <Box
-                sx={{
-                  padding: "1rem",
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  gap: "0.5rem",
-                }}
-              >
-                {player.inventory.badges.map((badge, i) => (
-                  <div key={i}>
-                    {inventoryBadges.map((inventoryBadge, e) => {
-                      if (inventoryBadge.id == badge)
-                        return (
-                          <Tooltip
-                            key={e}
-                            title={inventoryBadge.name}
-                            color={inventoryBadge.color}
-                            placement="top"
-                          >
-                            <MilitaryTechIcon fontSize="large" />
-                          </Tooltip>
-                        );
-                      return null;
-                    })}
-                  </div>
-                ))}
-              </Box>
-            ) : (
-              <></>
-            )}
+
+            <BadgesBox />
+
             <Box sx={{ padding: "1rem" }}>
               <Divider>
                 <Typography variant="subtitle1" p={2}>
