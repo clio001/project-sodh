@@ -5,6 +5,7 @@ import "../globals.css";
 import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 import Statbar from "../components/Statbar";
+import XpCheckHeinzi from "../components/XpCheckHeinzi";
 
 export default function Page() {
   const { scene, player, setPlayer, inventoryItems, inventoryEntries } =
@@ -14,18 +15,18 @@ export default function Page() {
   return (
     <main>
       <Statbar />
+      <XpCheckHeinzi />
+
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "92vh",
+          height: "90vh",
           justifyContent: "space-between",
         }}
       >
-        <Box>
-          <Typography variant="body1" sx={{ padding: "1rem" }}></Typography>
-        </Box>
+        <Box></Box>
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box className="container-scenetext" elevation={3}>

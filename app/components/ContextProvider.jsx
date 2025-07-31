@@ -18,7 +18,7 @@ export const ContextProvider = ({ children }) => {
     inventory: {
       items: [],
       journalEntries: [],
-      badges: [1, 2],
+      badges: [],
     },
   });
 
