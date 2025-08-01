@@ -70,7 +70,9 @@
 }
 
 .button-option {
-  border-left: 5px solid brown;
+  border-left: 5px solid transparent;
+  border-top: 1px solid brown;
+  border-bottom: 1px solid transparent;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-image: radial-gradient(circle at center, white, lightyellow),
@@ -80,6 +82,7 @@
   padding: 15px;
   width: 80%;
   max-width: 600px;
+  box-sizing: border-box;
   margin: 10px auto;
   cursor: pointer;
   opacity: 0.9;
@@ -92,6 +95,12 @@
   to {
     opacity: 1;
   }
+}
+
+.button-option:hover {
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid brown;
+  border-top: 1px solid transparent;
 }
 
 .button-landingPage {
