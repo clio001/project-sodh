@@ -46,7 +46,7 @@ export default function Statbar() {
             Level: {player.level}
           </Typography>
           <Typography
-            className="cursorPointer"
+            className="schreibtisch"
             variant="body2"
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
