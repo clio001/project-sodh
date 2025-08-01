@@ -1,15 +1,15 @@
 [
     {
       "id": "1",
-      "name": "Lesesaalexpert:in",
-      "Heinzi": "Herzlichen Glückwunsch! Du hast deinen ersten Journaleintrag gesammelt!",
+      "name": "Küchengehilfe",
+      "Heinzi": "Klasse! Du hast deine ersten 60XP gesammelt.",
       "color": "info",
       "imageUrl": ""
     },
     {
       "id": "2",
-      "name": "Menükarten-Sammler:in",
-      "Heinzi": "Du hast bereits zwei Menükarten gesammelt.",
+      "name": "Souschef",
+      "Heinzi": "Ditt jeht ja voran! Schon zwee Menükarten jesammelt.",
       "color": "success",
       "imageUrl": ""
     }

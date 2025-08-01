@@ -66,8 +66,9 @@ function HeinziBlurb({ badge }) {
             sx={{ my: "1rem" }}
           />
           <Typography variant="h6">{badge.name}</Typography>
-
-          <Typewriter text={badge.Heinzi} />
+          <Box textAlign="center">
+            <Typewriter text={badge.Heinzi} />
+          </Box>
         </Box>
       </Box>
     </Modal>
