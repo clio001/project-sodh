@@ -45,10 +45,10 @@ export default function Page() {
               className="border-background"
               src={selectedScene.imageUrl}
               style={{
-                width: "650px",
+                width: "600px",
                 maxWidth: "100%",
                 boxSizing: "border-box",
-                marginTop: "2.5rem",
+                marginTop: "3rem",
                 boxShadow: "0px 5px 10px grey",
               }}
             />
