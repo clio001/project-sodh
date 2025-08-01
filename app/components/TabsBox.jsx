@@ -4,6 +4,7 @@ import { TabPanel, TabContext, TabList } from "@mui/lab";
 import ObjectsBox from "./ObjectsBox";
 import EntriesBox from "./EntriesBox";
 import { useMyContext } from "./ContextProvider";
+import GrammoBox from "./GrammoBox";
 
 function TabsBox() {
   const { player } = useMyContext();
@@ -49,7 +50,9 @@ function TabsBox() {
         <TabPanel value="2">
           <EntriesBox />
         </TabPanel>
-        <TabPanel value="3">Badges?</TabPanel>
+        <TabPanel value="3">
+          <GrammoBox />
+        </TabPanel>
       </TabContext>
     </div>
   );
