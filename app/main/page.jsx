@@ -6,6 +6,7 @@ import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 import Statbar from "../components/Statbar";
 import XpCheckHeinzi from "../components/XpCheckHeinzi";
+import Image from "next/image";
 
 export default function Page() {
   const { scene, player, setPlayer, inventoryItems, inventoryEntries } =
@@ -34,11 +35,25 @@ export default function Page() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "93vh",
+          height: "91vh",
           justifyContent: "space-between",
         }}
       >
-        <Box></Box>
+        <Box className="image-main">
+          {selectedScene.imageUrl ? (
+            <img
+              className="border-background"
+              src={selectedScene.imageUrl}
+              style={{
+                width: "650px",
+                maxWidth: "100%",
+                boxSizing: "border-box",
+                marginTop: "2.5rem",
+                boxShadow: "0px 5px 10px grey",
+              }}
+            />
+          ) : null}
+        </Box>
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box className="container-scenetext" elevation={3}>

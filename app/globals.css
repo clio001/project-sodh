@@ -3,6 +3,23 @@
   padding: 0;
 }
 
+.image-main {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-background {
+  border: 8px solid transparent;
+  border-radius: 0px;
+  background-image: radial-gradient(circle at top center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 .container-scenetext {
   position: relative;
   opacity: 0.9;

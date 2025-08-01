@@ -3,6 +3,7 @@
     "id": 1,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
     "location": "Info-Punkt",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Willkommen in der Stabi! Wir haben gehört, du suchst historische Menükarten. Benötigst du Hilfe?",
     "options": [
       { "text": "Dringendst! Wo finde ich die Menükarten?", "nextSceneId": 4 },
@@ -13,6 +14,7 @@
     "id": 2,
     "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Lesesaal Vivarium",
+    "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
     "description": "Tachchen, meen Name is Greta! Ick arbeite hier inna Abteilung für Historische Drucke. Ick hab' dir ma' zwee historische Menükarten herausjesucht. Da knurrt einem gleich der Magen! ",
     "options": [
       { "text": "Erzähl mir mehr über die Sammlung!", "nextSceneId": 7 },
@@ -29,6 +31,7 @@
     "id": 3,
     "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Brunnenhof",
+    "imageUrl": "https://www.sueddeutsche.de/2022/06/08/51f92daa-6cbc-4722-bc07-eaf12cdae74c.jpeg?q=60&fm=jpeg&width=1000&rect=0%2C0%2C1600%2C900",
     "description": "Vielen Dank für deinen Besuch in der Stabi! Wir freuen uns dich bald wiederzusehen.",
     "options": [
       { "text": "Ich will doch nochmal weiter recherchieren.", "nextSceneId": 2 },
@@ -38,6 +41,7 @@
     "id": 4,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
     "location": "Info-Punkt",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Frag mal bei Greta nach! Die weiß sowas immer. Sie sitzt im Lesesaal Vivarium.",
     "options": [
       { "text": "Gehe zum Lesesaal Vivarium!", "nextSceneId": 5 },
@@ -48,6 +52,7 @@
     "id": 5,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
     "location": "Info-Punkt",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Moment mal, Freundchen! Wo is'n deine Anmeldung für den Lesesaal Vivarium?",
     "options": [
       { "text": "Welche Anmeldung?", "nextSceneId": 6 },
@@ -58,6 +63,7 @@
     "id": 6,
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
     "location": "Info-Punkt",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb.spk-berlin.de",
     "options": [
       { "text": "Gehe zu Greta!", "nextSceneId": 2 },
@@ -70,6 +76,7 @@
     "id": 7,
     "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
     "location": "Lesesaal Vivarium",
+    "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
     "description": "Die Sammlung gelangte 1916 durch eine Schenkung des Privatgelehrten Dr. Georg August Freund in den Besitz der Staatsbibliothek und umfasst knapp 3000 Karten. Einen Schwerpunkt bilden die Menükarten des kaiserlichen Hofes unter Wilhelm II. Der SBB-Blog hat dazu einen spannenden Beitrag!",
     "options": [
 
