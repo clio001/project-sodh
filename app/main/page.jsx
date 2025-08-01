@@ -12,8 +12,20 @@ export default function Page() {
     useMyContext();
   const [selectedScene, setSelectedScene] = useState(scene[0]);
 
+  const background = {
+    backgroundImage:
+      'url("https://raw.githubusercontent.com/clio001/retro-bites/main/static/Berlin_Unter_den_Linden_um_1900.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundBlendMode: "screen",
+    backgroundColor: "rgb(211,211,211, 0.7)",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
+    height: "100vh",
+  };
+
   return (
-    <main>
+    <main style={background}>
       <Statbar />
       <XpCheckHeinzi />
 
@@ -22,7 +34,7 @@ export default function Page() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "90vh",
+          height: "93vh",
           justifyContent: "space-between",
         }}
       >
