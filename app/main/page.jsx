@@ -39,7 +39,7 @@ export default function Page() {
           justifyContent: "space-between",
         }}
       >
-        <Box className="image-main">
+        {/* <Box className="image-main">
           {selectedScene.imageUrl ? (
             <img
               className="border-background"
@@ -53,7 +53,7 @@ export default function Page() {
               }}
             />
           ) : null}
-        </Box>
+        </Box> */}
         <Box mb={2}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box className="container-scenetext" elevation={3}>
