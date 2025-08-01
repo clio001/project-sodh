@@ -28,6 +28,7 @@ export const ContextProvider = ({ children }) => {
   const [scene, setScene] = useState(DBscenes);
   const [inventoryBadges, setInventoryBadges] = useState(DBbadges);
 
+  const [flash, setFlash] = useState("schreibtisch");
   return (
     <MyContextProvider.Provider
       value={{
@@ -43,6 +44,8 @@ export const ContextProvider = ({ children }) => {
         setInventoryEntries,
         inventoryBadges,
         setInventoryBadges,
+        flash,
+        setFlash,
       }}
     >
       {children}

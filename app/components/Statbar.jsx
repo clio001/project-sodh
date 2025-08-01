@@ -10,7 +10,7 @@ import TabsBox from "./TabsBox";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
-  const { player } = useMyContext();
+  const { player, flash } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -46,7 +46,7 @@ export default function Statbar() {
             Level: {player.level}
           </Typography>
           <Typography
-            className="schreibtisch"
+            className={flash}
             variant="body2"
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}

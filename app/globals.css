@@ -144,3 +144,37 @@
   color: #ffffff;
   text-shadow: 0 0 8px lightyellow, 0 0 12px lightyellow, 0 0 20px lightyellow;
 }
+
+.inventory-icon {
+  display: inline-block;
+
+  border-radius: 6px;
+  animation: popFlash 0.5s ease;
+  transition: transform 0.2s;
+}
+
+@keyframes popFlash {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 white;
+  }
+  20% {
+    transform: scale(1.2);
+    text-shadow: 0 5px 15px lightblue;
+  }
+  40% {
+    transform: scale(1);
+    text-shadow: 0 0 0 white;
+    color: lightyellow;
+  }
+  70% {
+    transform: scale(1.2);
+    text-shadow: 0 5px 15px lightblue;
+  }
+
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 white;
+    color: lightyellow;
+  }
+}

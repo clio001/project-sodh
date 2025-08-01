@@ -6,11 +6,16 @@ import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 import Statbar from "../components/Statbar";
 import XpCheckHeinzi from "../components/XpCheckHeinzi";
-import Image from "next/image";
 
 export default function Page() {
-  const { scene, player, setPlayer, inventoryItems, inventoryEntries } =
-    useMyContext();
+  const {
+    scene,
+    player,
+    setPlayer,
+    inventoryItems,
+    inventoryEntries,
+    setFlash,
+  } = useMyContext();
   const [selectedScene, setSelectedScene] = useState(scene[0]);
 
   const background = {
@@ -110,6 +115,10 @@ export default function Page() {
                                 }}
                                 onClick={() => {
                                   if (!player.inventory.items.includes(item)) {
+                                    setFlash("schreibtisch inventory-icon");
+                                    setTimeout(() => {
+                                      setFlash("schreibtisch");
+                                    }, 500);
                                     setPlayer({
                                       ...player,
                                       xp: player.xp + 25,
@@ -158,6 +167,10 @@ export default function Page() {
                                       entry
                                     )
                                   ) {
+                                    setFlash("schreibtisch inventory-icon");
+                                    setTimeout(() => {
+                                      setFlash("schreibtisch");
+                                    }, 500);
                                     setPlayer({
                                       ...player,
                                       xp: player.xp + 25,
