@@ -3,12 +3,15 @@ import { Box, Tab } from "@mui/material";
 import { TabPanel, TabContext, TabList } from "@mui/lab";
 import ObjectsBox from "./ObjectsBox";
 import EntriesBox from "./EntriesBox";
+import { useMyContext } from "./ContextProvider";
 
 function TabsBox() {
+  const { player } = useMyContext();
   const [value, setValue] = useState("1");
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <div>
       <TabContext value={value}>
@@ -21,8 +24,22 @@ function TabsBox() {
             textColor=""
             indicatorColor="secondary"
           >
-            <Tab label="Objekte" value="1" />
-            <Tab label="Journal" value="2" />
+            <Tab
+              label={
+                player.inventory.items.length > 0
+                  ? `Objekte (${player.inventory.items.length})`
+                  : "Objekte"
+              }
+              value="1"
+            />
+            <Tab
+              label={
+                player.inventory.journalEntries.length > 0
+                  ? `Journal (${player.inventory.journalEntries.length})`
+                  : "Journal"
+              }
+              value="2"
+            />
             <Tab label="Grammophon" value="3" />
           </TabList>
         </Box>
