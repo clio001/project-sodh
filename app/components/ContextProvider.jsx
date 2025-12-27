@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { createContext } from "react";
 import DBitems from "../../public/dbs/db-items.json";
 import DBjentries from "../../public/dbs/db-journal.json";
@@ -32,6 +32,12 @@ export const ContextProvider = ({ children }) => {
   const [menu, setMenu] = useState(DBmenu);
 
   const [flash, setFlash] = useState("schreibtisch");
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setMenu(checked ? DBmenuEN : DBmenu);
+  }, [checked]);
+
   return (
     <MyContextProvider.Provider
       value={{
@@ -51,6 +57,8 @@ export const ContextProvider = ({ children }) => {
         setFlash,
         menu,
         setMenu,
+        checked,
+        setChecked,
       }}
     >
       {children}
