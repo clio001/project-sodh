@@ -7,7 +7,7 @@ import { useMyContext } from "./ContextProvider";
 import GrammoBox from "./GrammoBox";
 
 function TabsBox() {
-  const { player } = useMyContext();
+  const { player, menu } = useMyContext();
   const [value, setValue] = useState("1");
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -28,20 +28,20 @@ function TabsBox() {
             <Tab
               label={
                 player.inventory.items.length > 0
-                  ? `Objekte (${player.inventory.items.length})`
-                  : "Objekte"
+                  ? `${menu.deskModal.tabObjects} (${player.inventory.items.length})`
+                  : `${menu.deskModal.tabObjects}`
               }
               value="1"
             />
             <Tab
               label={
                 player.inventory.journalEntries.length > 0
-                  ? `Journal (${player.inventory.journalEntries.length})`
-                  : "Journal"
+                  ? `${menu.deskModal.tabJournal} (${player.inventory.journalEntries.length})`
+                  : `${menu.deskModal.tabJournal}`
               }
               value="2"
             />
-            <Tab label="Grammophon" value="3" />
+            <Tab label={menu.deskModal.tabPlayer} value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">

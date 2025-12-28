@@ -4,5 +4,11 @@
     "start": "START",
     "collection": "THE COLLECTION",
     "credits": "CREDITS",
-    "desk": "Desk"
+    "desk": "Desk",
+    "deskModal": {
+        "title": "Desk",
+        "tabObjects": "Objects",
+        "tabJournal": "Journal",
+        "tabPlayer": "Grammophone"
+    }
 }

@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info Point",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
+    "description": "Welcome to the Stabi! We heard you're looking for historical menucards. Can I help you?",
+    "options": [
+      { "text": "Absolutely! Where can I find the menucards?", "nextSceneId": 4 },
+      { "text": "Boring! Where's the exit?", "nextSceneId": 3 }]
+  },
+ 
+  {
+    "id": 2,
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "location": "Reading Room Vivarium",
+    "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
+    "description": "Hey there, me name is Greta! Me works right here in the department of historical prints. I picked out two menucards for ya right here. Makes me hungry right away!",
+    "options": [
+      { "text": "Tell me more about the collection!", "nextSceneId": 7 },
+      { "text": "Alright, good to know! Where's the exit?", "nextSceneId": 3 }
+    ],
+    "items": [1, 2],
+    "required": {
+      "journalEntry": 1,
+      "refusedSceneId": 5
+    }
+    
+  },
+  {
+    "id": 3,
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "location": "Brunnenhof",
+    "imageUrl": "https://www.sueddeutsche.de/2022/06/08/51f92daa-6cbc-4722-bc07-eaf12cdae74c.jpeg?q=60&fm=jpeg&width=1000&rect=0%2C0%2C1600%2C900",
+    "description": "Thank you for visiting the Stabi! We look forward to seeing you again.",
+    "options": [
+      { "text": "I need to do more research.", "nextSceneId": 2 },
+      { "text": "I must get out!!!", "nextSceneId": 0 }
+    ]
+  }, {
+    "id": 4,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info Point",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
+    "description": "Ask for Greta! She always knows these things. She's over in the reading room Vivarium.",
+    "options": [
+      { "text": "Go to the Reading Room Vivarium!", "nextSceneId": 5 },
+      { "text": "Boring! Where's the exit?", "nextSceneId": 3 }
+    ]
+  },
+  {
+    "id": 5,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info Point",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
+    "description": "Hang on, pal! Where's ye registration for the Reading Room Vivarium?",
+    "options": [
+      { "text": "What registration?", "nextSceneId": 6 },
+      { "text": "Where's the exit?", "nextSceneId": 3 }
+    ]
+  },
+  {
+    "id": 6,
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_TzQivSqhrD2Dj8HwxngUWatXMMO4AD8QA&s",
+    "location": "Info Point",
+    "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
+    "description": "If you'd like to use the Reading Room Vivarium, you need to register! Obviously, no? Just shoot an email to hdh@sbb.spk-berlin.de",
+    "options": [
+      { "text": "Go to Greta!", "nextSceneId": 2 },
+      { "text": "Where's the exit?", "nextSceneId": 3 }
+    ],
+    "journalEntries": [1]
+    
+  },
+  {
+    "id": 7,
+    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "location": "Reading Room Vivarium",
+    "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
+    "description": "The collection was acquired by the Staatsbibliothek in 1916 as a gift by Dr. Georg August Freund and is comprised of over 3.500 menucards. Menucards by the Royal Court of Wilhelm II. are one area of the collection. The SBB Blog has a fantastic post on this.",
+    "options": [
+
+      { "text": "Thank you, that's great! Where's the exit?", "nextSceneId": 3 }
+    ],
+    "journalEntries": [2],
+    "badges": 1
+  }
+]

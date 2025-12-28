@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "name": "Register for reading room",
+      "description": "Registration is required to work in the Reading Room Vivarium for Historical Prints and Manuscripts. Just send an email to hdh@sbb.spk-berlin.de.",
+      "image": "https://example.com/images/vintage-camera.jpg"
+    },
+    {
+      "id": "2",
+      "name": "SBB Blog on menucards",
+      "description": "The menucard collection of the Manuscript Division at the Stabi provides an overview over the changing importance of this special graphical genre since its inception in the 18th century. The menucards mostly contain the menu order but also information on beverages, accompanying music and other performances at weddings, dances and travel via ship. Some of the cards stand out for their golden ornamentation, heraldry, playful ornaments and detailed illustration.",
+      "image": "https://example.com/images/leather-notebook.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Metadaten verstehen",
+      "description": "A vintage typewriter from the 1950s, perfect for writers.",
+      "image": "https://example.com/images/vintage-typewriter.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Stabi-Ausweis beantragen",
+      "description": "A classic vinyl record player with a sleek design.",
+      "image": "https://example.com/images/vinyl-player.jpg"
+    }
+]

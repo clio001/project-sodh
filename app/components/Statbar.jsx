@@ -71,7 +71,7 @@ export default function Statbar() {
                 justifyContent: "space-between",
               }}
             >
-              <h1 style={{ padding: "2rem" }}>Schreibtisch</h1>
+              <h1 style={{ padding: "2rem" }}>{menu.deskModal.title}</h1>
 
               <CloseIcon
                 className="cursorPointer"

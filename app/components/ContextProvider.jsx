@@ -2,10 +2,13 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import { createContext } from "react";
-import DBitems from "../../public/dbs/db-items.json";
-import DBjentries from "../../public/dbs/db-journal.json";
-import DBscenes from "../../public/dbs/db-scenes.json";
-import DBbadges from "../../public/dbs/db-badges.json";
+import DBitems from "../../public/dbs/DE/db-items.json";
+import DBjentries from "../../public/dbs/DE/db-journal.json";
+import DBjentriesEN from "../../public/dbs/EN/db-journalEN.json";
+import DBscenes from "../../public/dbs/DE/db-scenes.json";
+import DBscenesEN from "../../public/dbs/EN/db-scenesEN.json";
+import DBbadges from "../../public/dbs/DE/db-badges.json";
+import DBbadgesEN from "../../public/dbs/EN/db-badgesEN.json";
 import DBmenu from "../../public/dbs/DE/db-menu.json";
 import DBmenuEN from "../../public/dbs/EN/db-menuEN.json";
 const MyContextProvider = createContext();
@@ -36,6 +39,9 @@ export const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     setMenu(checked ? DBmenuEN : DBmenu);
+    setScene(checked ? DBscenesEN : DBscenes);
+    setInventoryBadges(checked ? DBbadgesEN : DBbadges);
+    setInventoryEntries(checked ? DBjentriesEN : DBjentries);
   }, [checked]);
 
   return (

@@ -1,0 +1,16 @@
+[
+    {
+      "id": "1",
+      "name": "Kitchen Aid",
+      "Heinzi": "Fantastic! You collected your first 60XP",
+      "color": "info",
+      "imageUrl": ""
+    },
+    {
+      "id": "2",
+      "name": "Souschef",
+      "Heinzi": "Look at that! You collected two menucards already!",
+      "color": "success",
+      "imageUrl": ""
+    }
+]
