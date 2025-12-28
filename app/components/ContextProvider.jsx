@@ -6,8 +6,8 @@ import DBitems from "../../public/dbs/db-items.json";
 import DBjentries from "../../public/dbs/db-journal.json";
 import DBscenes from "../../public/dbs/db-scenes.json";
 import DBbadges from "../../public/dbs/db-badges.json";
-import DBmenu from "../../public/dbs/db-menu.json";
-import DBmenuEN from "../../public/dbs/db-menuEN.json";
+import DBmenu from "../../public/dbs/DE/db-menu.json";
+import DBmenuEN from "../../public/dbs/EN/db-menuEN.json";
 const MyContextProvider = createContext();
 
 export const ContextProvider = ({ children }) => {

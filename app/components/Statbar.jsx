@@ -10,7 +10,7 @@ import TabsBox from "./TabsBox";
 
 export default function Statbar() {
   const [open, setOpen] = React.useState(false);
-  const { player, flash } = useMyContext();
+  const { player, flash, menu } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -51,7 +51,8 @@ export default function Statbar() {
             sx={{ marginLeft: "20px" }}
             onClick={toggleDrawer(true)}
           >
-            Schreibtisch:{" "}
+            {menu.desk}
+            {": "}
             <span>
               {player.inventory.items.length +
                 player.inventory.journalEntries.length}
