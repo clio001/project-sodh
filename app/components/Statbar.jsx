@@ -63,7 +63,7 @@ export default function Statbar() {
 
       <div>
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-          <Box sx={{ width: "100vw", maxWidth: "800px" }}>
+          <Box sx={{ width: "100vw", maxWidth: "500px" }}>
             <Box
               sx={{
                 display: "flex",
