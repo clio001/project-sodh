@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 function ObjectModal({ menucard }) {
   const style = {
@@ -15,12 +15,24 @@ function ObjectModal({ menucard }) {
     backgroundImage:
       "radial-gradient(circle at center, white, lightyellow), linear-gradient(150deg, brown, lightyellow)",
   };
+
   const url = `https://mirador.staatsbibliothek-berlin.de/?manifest=https://content.staatsbibliothek-berlin.de/dc/PPN${menucard.ppn}/manifest`;
+
+  const [size, setSize] = useState("20%");
+
+  const handlesize = () => {
+    if (size == "100%") {
+      setSize("20%");
+    } else {
+      setSize("100%");
+    }
+  };
+
   return (
     <>
       <Box sx={style}>
         <Box sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-          <Box sx={{ width: "66%" }}>
+          <Box sx={{ width: "60%" }}>
             {" "}
             <iframe
               src={url}
@@ -31,9 +43,38 @@ function ObjectModal({ menucard }) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />{" "}
           </Box>
-          <Box sx={{ padding: "2.5rem" }}>
+          <Box sx={{ width: "30%", padding: "2rem" }}>
             {" "}
-            <Typography variant="Body1">{menucard.title}</Typography>{" "}
+            <Typography
+              variant="h5"
+              sx={{ textWrap: "wrap", marginBottom: "0.5rem" }}
+            >
+              {menucard.title}
+            </Typography>{" "}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "col",
+                flexWrap: "wrap",
+                alignItems: "baseline",
+                gap: "0.4rem",
+              }}
+            >
+              <Box
+                component="img"
+                src={menucard.image}
+                width={size}
+                sx={{
+                  borderRadius: 2,
+                  objectFit: "cover",
+                }}
+                onClick={handlesize}
+              />
+              <Typography variant="subtitle2">
+                Diese Menükarte wurde {menucard.year} von {menucard.creator} im{" "}
+                {menucard.publisher} in {menucard.place} angefertigt.
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
