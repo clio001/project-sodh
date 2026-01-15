@@ -16,7 +16,7 @@ function ObjectModal({ menucard }) {
       "radial-gradient(circle at center, white, lightyellow), linear-gradient(150deg, brown, lightyellow)",
   };
 
-  const url = `https://mirador.staatsbibliothek-berlin.de/?manifest=https://content.staatsbibliothek-berlin.de/dc/PPN${menucard.ppn}/manifest`;
+  const url = `https://mirador.staatsbibliothek-berlin.de/v3/?manifest=https://content.staatsbibliothek-berlin.de/dc/PPN${menucard.ppn}/manifest`;
 
   const [size, setSize] = useState("20%");
 
