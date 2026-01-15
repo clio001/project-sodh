@@ -67,29 +67,39 @@ export default function Page() {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
-                  marginTop: "-1rem",
                 }}
               >
                 <Avatar
                   sx={{
-                    border: "2px solid brown",
-                    width: 50,
-                    height: 50,
-                    marginLeft: "1rem",
+                    border: "opx",
+                    width: 200,
+                    height: 200,
+                    marginLeft: "-4rem",
+                    marginTop: "-4rem",
                   }}
                   src={selectedScene.avatar}
                 ></Avatar>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "start",
+                  }}
+                >
+                  <Typewriter text={selectedScene.description} speed={35} />
+                </Box>
+
                 <Chip
                   label={selectedScene.location}
                   variant="outlined"
                   className="background-location"
                   sx={{
                     border: "2px solid brown",
-                    marginRight: "1rem",
+                    marginRight: "-1rem",
+                    marginTop: "-1rem",
                   }}
                 />
               </Box>{" "}
-              <Typewriter text={selectedScene.description} speed={35} />
               <Box
                 sx={{
                   display: "flex",
