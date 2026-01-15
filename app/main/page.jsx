@@ -61,45 +61,44 @@ export default function Page() {
           ) : null}*/}
         </Box>
         <Box mb={2}>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box className="container-scenetext" elevation={3}>
-              <Box
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            {" "}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "end",
+              }}
+            >
+              <Avatar
                 sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
+                  border: "opx",
+                  width: 250,
+                  height: 250,
+                  marginLeft: "-4rem",
+                  marginTop: "rem",
                 }}
-              >
-                <Avatar
-                  sx={{
-                    border: "opx",
-                    width: 200,
-                    height: 200,
-                    marginLeft: "-4rem",
-                    marginTop: "-4rem",
-                  }}
-                  src={selectedScene.avatar}
-                ></Avatar>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "start",
-                  }}
-                >
-                  <Typewriter text={selectedScene.description} speed={35} />
-                </Box>
-
-                <Chip
-                  label={selectedScene.location}
-                  variant="outlined"
-                  className="background-location"
-                  sx={{
-                    border: "2px solid brown",
-                    marginRight: "-1rem",
-                    marginTop: "-1rem",
-                  }}
-                />
-              </Box>{" "}
+                src={selectedScene.avatar}
+              ></Avatar>
+              {/*               <Chip
+                label={selectedScene.location}
+                variant="outlined"
+                className="background-location"
+                sx={{
+                  border: "2px solid brown",
+                  marginRight: "-1rem",
+                  marginTop: "-1rem",
+                }}
+              />{" "} */}
+            </Box>{" "}
+            <Box className="container-scenetext" elevation={3} mt={-8}>
+              <Typewriter text={selectedScene.description} speed={35} />
               <Box
                 sx={{
                   display: "flex",
