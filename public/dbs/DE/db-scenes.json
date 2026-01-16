@@ -39,7 +39,7 @@
     ]
   }, {
     "id": 4,
-    "avatar": "/assets/avatars/heinzi-avatar.png",
+    "avatar": "/assets/avatars/kohler-avatar.png",
     "location": "Info-Punkt",
     "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Frag mal bei Greta nach! Die weiß sowas immer. Sie sitzt im Lesesaal Vivarium.",
@@ -50,7 +50,7 @@
   },
   {
     "id": 5,
-    "avatar": "/assets/avatars/heinzi-avatar.png",
+    "avatar": "/assets/avatars/kohler-avatar.png",
     "location": "Info-Punkt",
     "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Moment mal, Freundchen! Wo is'n deine Anmeldung für den Lesesaal Vivarium?",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "avatar": "/assets/avatars/heinzi-avatar.png",
+    "avatar": "/assets/avatars/kohler-avatar.png",
     "location": "Info-Punkt",
     "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb.spk-berlin.de",
