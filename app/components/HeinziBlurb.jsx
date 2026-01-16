@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Typewriter from "./Typewriter";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import { useMyContext } from "./ContextProvider";
+import Image from "next/image";
 
 function HeinziBlurb({ badge }) {
   const [open, setOpen] = useState(true);
@@ -53,17 +54,22 @@ function HeinziBlurb({ badge }) {
         >
           <Avatar
             sx={{
-              border: "2px solid brown",
-              width: 80,
-              height: 80,
+              width: 150,
+              height: 150,
             }}
-            src="https://easydrawingguides.com/wp-content/uploads/2022/12/how-to-draw-an-easy-lisa-simpson-drawing-featured-image-1200.png"
+            src="/assets/avatars/heinzi-avatar.png"
           ></Avatar>
 
-          <MilitaryTechIcon
+          {/*           <MilitaryTechIcon
             color={badge.color}
             fontSize="large"
             sx={{ my: "1rem" }}
+          /> */}
+          <Image
+            src="/assets/badges/lehrling-badge.png"
+            width={100}
+            height={100}
+            alt="Auszeichnung als Lehrling"
           />
           <Typography variant="h6">{badge.name}</Typography>
           <Box textAlign="center">

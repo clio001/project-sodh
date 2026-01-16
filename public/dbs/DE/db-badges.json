@@ -1,10 +1,10 @@
 [
     {
       "id": "1",
-      "name": "Küchengehilfe",
+      "name": "Lehrling",
       "Heinzi": "Klasse! Du hast deine ersten 60XP gesammelt.",
       "color": "info",
-      "imageUrl": ""
+      "imageUrl": "/assets/badges/lehrling-badge.png"
     },
     {
       "id": "2",
