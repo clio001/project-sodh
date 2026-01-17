@@ -1,19 +1,26 @@
 "use client";
-import { Box, Drawer, Typography } from "@mui/material";
+import { Box, Drawer, Modal, Typography } from "@mui/material";
 import React from "react";
+import { useState } from "react";
 import { useMyContext } from "./ContextProvider";
 import "../globals.css";
 import CloseIcon from "@mui/icons-material/Close";
 import MusicPlayer from "./MusicPlayer";
 import BadgesBox from "./BadgesBox";
 import TabsBox from "./TabsBox";
+import YTPlayerModal from "./YTPlayerModal";
 
 export default function Statbar() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [openYTPlayer, setOpenYTPlayer] = useState(false);
   const { player, flash, menu } = useMyContext();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
+  };
+
+  const handleclose = () => {
+    setOpenYTPlayer(false);
   };
 
   return (
@@ -39,7 +46,11 @@ export default function Statbar() {
         >
           <MusicPlayer />
 
-          <Typography variant="body2" sx={{ marginLeft: "20px" }}>
+          <Typography
+            variant="body2"
+            sx={{ marginLeft: "20px" }}
+            onClick={() => setOpenYTPlayer(true)}
+          >
             XP: {player.xp}
           </Typography>
           <Typography variant="body2" sx={{ marginLeft: "20px" }}>
@@ -60,7 +71,11 @@ export default function Statbar() {
           </Typography>
         </Box>
       </Box>
-
+      <div>
+        <Modal open={openYTPlayer} onClose={handleclose}>
+          <YTPlayerModal />
+        </Modal>
+      </div>
       <div>
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
           <Box sx={{ width: "100vw", maxWidth: "500px" }}>
