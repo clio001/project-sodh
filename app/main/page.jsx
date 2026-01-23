@@ -1,11 +1,13 @@
 "use client";
-import { Avatar, Box, Chip, Typography } from "@mui/material";
+import { Avatar, Box, Chip, Popover, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "../globals.css";
 import { useMyContext } from "../components/ContextProvider";
 import Typewriter from "../components/Typewriter";
 import Statbar from "../components/Statbar";
 import XpCheckHeinzi from "../components/XpCheckHeinzi";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import HelpBox from "../components/HelpBox";
 
 export default function Page() {
   const {
@@ -30,10 +32,49 @@ export default function Page() {
     height: "100vh",
   };
 
+  const handleclick = () => {
+    if (open) {
+      setOpen(false)
+    } else { setOpen(true) }
+  }
+
+
+  const [anchorEl, setAnchorEl] = useState(null)
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+  const open = Boolean(anchorEl)
+  const id = open ? 'simple-popover' : undefined
+
+
   return (
     <main style={background}>
       <Statbar />
       <XpCheckHeinzi />
+      <Popover
+        id={id}
+        open={open}
+        anchorReference="anchorPosition"
+        anchorEl={anchorEl}
+        anchorPosition={{ top: 3000, left: 3000 }}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        PaperProps={{
+          sx: {
+            overflow: "visible",
+            marginBottom: "1rem",
+          }
+        }}
+      >
+        <HelpBox />
+      </Popover>
 
       <Box
         sx={{
@@ -78,11 +119,11 @@ export default function Page() {
             >
               <Avatar
                 sx={{
-                  border: "opx",
+                  border: "0px",
                   width: 250,
                   height: 250,
                   marginLeft: "-4rem",
-                  marginTop: "rem",
+                  marginTop: "-8rem",
                 }}
                 src={selectedScene.avatar}
               ></Avatar>
@@ -202,6 +243,8 @@ export default function Page() {
                     );
                   })}
               </Box>
+              <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "end", margin: "0.5rem" }}> <HelpOutlineIcon color="primary" fontSize="small" onClick={handleClick} /></Box>
+
             </Box>
           </Box>
           <Box>

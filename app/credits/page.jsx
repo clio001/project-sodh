@@ -1,8 +1,11 @@
-import { Box } from "@mui/material";
-import React from "react";
+"use client"
+
+import { Box, Button, Modal, Popover, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import AudioPlayer from "../components/AudioPlayer";
 import VideoPlayer from "../components/VideoPlayer";
 import YouTubePlayer from "../components/YouTubePlayer";
+import { BorderColor } from "@mui/icons-material";
 
 function page() {
   return (
