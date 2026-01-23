@@ -70,6 +70,8 @@ export default function Page() {
           sx: {
             overflow: "visible",
             marginBottom: "1rem",
+            borderRadius: "50px 20px 50px 50px",
+            boxShadow: "0px 4px 25px lightyellow"
           }
         }}
       >

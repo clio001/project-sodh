@@ -10,8 +10,9 @@ function HelpBox() {
     minHeight: "150px",
     padding: "0.5rem",
     position: "relative",
+    borderRadius: "50px 20px 50px 50px  ",
     backgroundImage:
-      "radial-gradient(circle at center, white, lightyellow), linear-gradient(150deg, brown, lightyellow)",
+      "radial-gradient(ellipse at right top, white, lightyellow), linear-gradient(150deg,  lightyellow)",
   };
   return (<>
     <Box sx={style}>
