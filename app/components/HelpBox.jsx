@@ -1,9 +1,18 @@
-import { Avatar, Box, Typography } from '@mui/material'
-import React from 'react'
+import { Avatar, Box, Button, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import Typewriter from './Typewriter';
 
 
 function HelpBox() {
+  const text = ["Na? Brauchste Hilfe, wa?", "Na mal, sehen wo der Schuh drückt ...", "... ah, ick seh schon! Haste mal oben uff XP jeklickt?"]
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleMore = () => {
+    setCurrentIndex(prev =>
+      prev < text.length - 1 ? prev + 1 : prev
+    );
+  };
+
 
   const style = {
     width: "350px",
@@ -17,7 +26,11 @@ function HelpBox() {
   return (<>
     <Box sx={style}>
       <Avatar sx={{ width: 150, height: 150, top: "-6rem", left: "14rem", position: "absolute" }} src="/assets/avatars/heinzi-avatar.png">OP</Avatar>
-      <Box mt={3}><Typewriter text="Wo klemmt denn der Schuh? Vielleicht mal bei Lorenz Adlon nachfragen, der is hier janz umtriebig dieser Tage." speed={35} /></Box>
+      <Box mt={3}>
+        <Typewriter text={text[currentIndex]} speed={35} />
+        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "end", marginRight: "0.5rem" }}><Button size='small' onClick={handleMore} disabled={currentIndex === text.length - 1}>Weiter</Button></Box>
+
+      </Box>
     </Box></>
   )
 }
