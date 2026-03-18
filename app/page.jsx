@@ -72,7 +72,14 @@ export default function Home() {
               {menu.credits}
             </Box>
           </Link>
+          <Link href="/editor" style={{ textDecoration: "none" }}>
+            <Box className="button-landingPage" sx={{ textAlign: "center" }}>
+              {menu.editor}
+            </Box>
+          </Link>
         </Box>
+
+
         <Divider
           sx={{
             width: "80%",
