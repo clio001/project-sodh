@@ -7,7 +7,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { useMyContext } from "../components/ContextProvider";
 import Link from "next/link";
 
-function page() {
+function Page() {
     const { components, setComponents } = useMyContext()
     const [checked, setChecked] = useState(true)
 
@@ -63,4 +63,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
