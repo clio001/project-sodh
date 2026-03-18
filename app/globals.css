@@ -195,6 +195,15 @@
       /* border gradient */ !important;
 }
 
+.addButton {
+  box-shadow: 0px 5px 10px 0px lightgrey;
+}
+
+.addButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 @keyframes popFlash {
   0% {
     transform: scale(1);
