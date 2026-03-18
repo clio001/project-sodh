@@ -1,7 +1,12 @@
-import { Box } from "@mui/material";
-import React from "react";
+"use client"
+import { Box, Button, Typography } from "@mui/material";
+import React, { useState } from "react";
+
 
 function page() {
+
+
+
   return (
     <Box
       sx={{
@@ -14,6 +19,7 @@ function page() {
     >
       <h3>DIE SAMMLUNG</h3>
     </Box>
+
   );
 }
 

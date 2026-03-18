@@ -14,7 +14,8 @@
 .border-background {
   border: 8px solid transparent;
   border-radius: 0px;
-  background-image: radial-gradient(circle at top center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at top center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -31,7 +32,8 @@
   margin-top: 1.5rem;
   border: 2px solid transparent;
   border-radius: 0px;
-  background-image: radial-gradient(circle at top center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at top center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -49,7 +51,8 @@
 }
 
 .inventoryJournalEntry {
-  background-image: radial-gradient(circle at top, white, lightyellow),
+  background-image:
+    radial-gradient(circle at top, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -58,7 +61,8 @@
 }
 
 .background-location {
-  background-image: radial-gradient(circle at center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -75,7 +79,8 @@
   border-bottom: 1px solid transparent;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-image: radial-gradient(circle at center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -109,7 +114,8 @@
   border-bottom: 1px solid transparent;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-image: radial-gradient(circle at center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -131,7 +137,8 @@
 .button-landingPage {
   border: 2px solid transparent;
   border-radius: 0px;
-  background-image: radial-gradient(circle at top center, white, lightyellow),
+  background-image:
+    radial-gradient(circle at top center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow); /* border gradient */
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -167,7 +174,10 @@
 
 .schreibtisch:hover {
   color: #ffffff;
-  text-shadow: 0 0 8px lightyellow, 0 0 12px lightyellow, 0 0 20px lightyellow;
+  text-shadow:
+    0 0 8px lightyellow,
+    0 0 12px lightyellow,
+    0 0 20px lightyellow;
 }
 
 .inventory-icon {
@@ -176,6 +186,13 @@
   border-radius: 6px;
   animation: popFlash 0.5s ease;
   transition: transform 0.2s;
+}
+
+.new {
+  background-image:
+    radial-gradient(circle at top center, white, lightyellow),
+    /* inner background */ linear-gradient(150deg, brown, lightyellow)
+      /* border gradient */ !important;
 }
 
 @keyframes popFlash {
