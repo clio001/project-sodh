@@ -193,6 +193,8 @@
     radial-gradient(circle at top center, white, lightyellow),
     /* inner background */ linear-gradient(150deg, brown, lightyellow)
       /* border gradient */ !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
 }
 
 .addButton {

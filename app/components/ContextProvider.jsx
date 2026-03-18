@@ -11,6 +11,7 @@ import DBbadges from "../../public/dbs/DE/db-badges.json";
 import DBbadgesEN from "../../public/dbs/EN/db-badgesEN.json";
 import DBmenu from "../../public/dbs/DE/db-menu.json";
 import DBmenuEN from "../../public/dbs/EN/db-menuEN.json";
+import SceneForm from "./SceneForm";
 const MyContextProvider = createContext();
 
 export const ContextProvider = ({ children }) => {
@@ -36,6 +37,9 @@ export const ContextProvider = ({ children }) => {
 
   const [flash, setFlash] = useState("schreibtisch");
   const [checked, setChecked] = useState(false);
+
+  //NOTE - Scene editor state variables
+  const [components, setComponents] = useState([<SceneForm count={0} number={1} key={0} />])
 
   useEffect(() => {
     setMenu(checked ? DBmenuEN : DBmenu);
@@ -65,6 +69,8 @@ export const ContextProvider = ({ children }) => {
         setMenu,
         checked,
         setChecked,
+        components,
+        setComponents
       }}
     >
       {children}
