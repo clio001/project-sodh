@@ -12,10 +12,10 @@
  
   {
     "id": 2,
-    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "avatar": "/assets/avatars/harnack-avatar.png",
     "location": "Lesesaal Vivarium",
     "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
-    "description": "Tachchen, meen Name is Greta! Ick arbeite hier inna Abteilung für Historische Drucke. Ick hab' dir ma' zwee historische Menükarten herausjesucht. Da knurrt einem gleich der Magen! ",
+    "description": "Tachchen, meen Name is Adolf von Harnack! Ick arbeite hier inna Abteilung für Historische Drucke. Ick hab' dir ma' zwee historische Menükarten herausjesucht. Da knurrt einem gleich der Magen! ",
     "options": [
       { "text": "Erzähl mir mehr über die Sammlung!", "nextSceneId": 7 },
       { "text": "Na dann weiß ich Bescheid. Wo ist der Ausgang?", "nextSceneId": 3 }
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "avatar": "/assets/avatars/harnack-avatar.png",
     "location": "Brunnenhof",
     "imageUrl": "https://www.sueddeutsche.de/2022/06/08/51f92daa-6cbc-4722-bc07-eaf12cdae74c.jpeg?q=60&fm=jpeg&width=1000&rect=0%2C0%2C1600%2C900",
     "description": "Vielen Dank für deinen Besuch in der Stabi! Wir freuen uns dich bald wiederzusehen.",
@@ -42,7 +42,7 @@
     "avatar": "/assets/avatars/kohler-avatar.png",
     "location": "Info-Punkt",
     "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
-    "description": "Frag mal bei Greta nach! Die weiß sowas immer. Sie sitzt im Lesesaal Vivarium.",
+    "description": "Frag mal bei Adolf von Harnack nach! Der weiß sowas immer. Er sitzt im Lesesaal Vivarium.",
     "options": [
       { "text": "Gehe zum Lesesaal Vivarium!", "nextSceneId": 5 },
       { "text": "Langweilig! Wo ist der Ausgang?", "nextSceneId": 3 }
@@ -66,7 +66,7 @@
     "imageUrl": "https://www.berlin.de/binaries/asset/image_assets/6424038/source/1750676176/1000x500/",
     "description": "Wenn du den Lesesaal nutzen willst, brauchste ne Anmeldung! Is doch klar! Schreibste einfach ne E-Mail an hdh@sbb.spk-berlin.de",
     "options": [
-      { "text": "Gehe zu Greta!", "nextSceneId": 2 },
+      { "text": "Gehe zu Adolf von Harnack!", "nextSceneId": 2 },
       { "text": "Wo ist der Ausgang?", "nextSceneId": 3 }
     ],
     "journalEntries": [1]
@@ -74,7 +74,7 @@
   },
   {
     "id": 7,
-    "avatar": "https://www.n-tv.de/img/incoming/crop11614891/1471165034-cImg_1_1-w1200/Edna-Krabappel.jpg",
+    "avatar": "/assets/avatars/harnack-avatar.png",
     "location": "Lesesaal Vivarium",
     "imageUrl": "https://staatsbibliothek-berlin.de/fileadmin/user_upload/zentrale_Seiten/handschriftenabteilung/Handschriftenlesesaal_1.jpg",
     "description": "Die Sammlung gelangte 1916 durch eine Schenkung des Privatgelehrten Dr. Georg August Freund in den Besitz der Staatsbibliothek und umfasst knapp 3000 Karten. Einen Schwerpunkt bilden die Menükarten des kaiserlichen Hofes unter Wilhelm II. Der SBB-Blog hat dazu einen spannenden Beitrag!",
